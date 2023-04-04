@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Poly.png-c5c1f9cff8032af8910f61eca54cd93d.stex"
+path="res://.import/rotationLevelCharacter.png-43c07ca7f716940a2dec079773984ae0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Poly.png"
-dest_files=[ "res://.import/Poly.png-c5c1f9cff8032af8910f61eca54cd93d.stex" ]
+source_file="res://assets/images/player/rotationLevelCharacter.png"
+dest_files=[ "res://.import/rotationLevelCharacter.png-43c07ca7f716940a2dec079773984ae0.stex" ]
 
 [params]
 

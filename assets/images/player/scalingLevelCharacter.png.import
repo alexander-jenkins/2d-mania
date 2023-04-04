@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enemy_Circle.png-1d1aad9fadb90ddaff37044ae7528b54.stex"
+path="res://.import/scalingLevelCharacter.png-63d30f9cb539b071fe28f258da6a49fd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Enemy_Circle.png"
-dest_files=[ "res://.import/Enemy_Circle.png-1d1aad9fadb90ddaff37044ae7528b54.stex" ]
+source_file="res://assets/images/player/scalingLevelCharacter.png"
+dest_files=[ "res://.import/scalingLevelCharacter.png-63d30f9cb539b071fe28f258da6a49fd.stex" ]
 
 [params]
 

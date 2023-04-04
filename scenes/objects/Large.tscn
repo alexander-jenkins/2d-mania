@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://art/Enemy_Circle.png" type="Texture" id=1]
-[ext_resource path="res://Enemy/Large.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/enemies/circleEnemy.png" type="Texture" id=1]
+[ext_resource path="res://scripts/enemies/Large.gd" type="Script" id=2]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {

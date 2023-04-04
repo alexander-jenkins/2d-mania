@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Angle.png-da79dd70beba8360139f0a95dc5f9522.stex"
+path="res://.import/circleEnemy.png-2af894055cbdad7e5952c0f5ff5f636a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Angle.png"
-dest_files=[ "res://.import/Angle.png-da79dd70beba8360139f0a95dc5f9522.stex" ]
+source_file="res://assets/images/enemies/circleEnemy.png"
+dest_files=[ "res://.import/circleEnemy.png-2af894055cbdad7e5952c0f5ff5f636a.stex" ]
 
 [params]
 

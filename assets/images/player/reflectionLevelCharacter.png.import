@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cri.png-dbb7a589a7d694a56640fc2aeb52f4f5.stex"
+path="res://.import/reflectionLevelCharacter.png-df0b9bad026a907719569ecef2dd4143.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Cri.png"
-dest_files=[ "res://.import/Cri.png-dbb7a589a7d694a56640fc2aeb52f4f5.stex" ]
+source_file="res://assets/images/player/reflectionLevelCharacter.png"
+dest_files=[ "res://.import/reflectionLevelCharacter.png-df0b9bad026a907719569ecef2dd4143.stex" ]
 
 [params]
 

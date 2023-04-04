@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rect.png-5ec4c77f0fbfef93ccf67ebf50c22a5e.stex"
+path="res://.import/translationLevelCharacter.png-f286d278373d775f56d75b242fbf6847.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Rect.png"
-dest_files=[ "res://.import/Rect.png-5ec4c77f0fbfef93ccf67ebf50c22a5e.stex" ]
+source_file="res://assets/images/player/translationLevelCharacter.png"
+dest_files=[ "res://.import/translationLevelCharacter.png-f286d278373d775f56d75b242fbf6847.stex" ]
 
 [params]
 
