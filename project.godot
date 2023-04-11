@@ -21,14 +21,15 @@ _global_script_class_icons={
 [application]
 
 config/name="SlideFilpRise"
-run/main_scene="res://scenes/objects/Large.tscn"
-config/icon="res://assets/images/rectangle.png"
+run/main_scene="res://scenes/levels/testLevel.tscn"
+config/icon="res://assets/images/player/reflectionLevelCharacter.png"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
-window/size/resizable=false
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [editor]
 

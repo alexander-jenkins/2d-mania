@@ -8,7 +8,7 @@ animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
-"speed": 12.0
+"speed": 24.0
 } ]
 
 [node name="Large" type="Area2D"]
@@ -17,12 +17,14 @@ scale = Vector2( 0.4, 0.4 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 1, 1 )
 frames = SubResource( 3 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( 5, -57, 574, 553, 630, 496, 697, 392, 750, 271, 786, 113, 785, -70, 729, -285, 639, -447, 518, -576, 380, -678, 218, -747, 31, -775, -156, -763, -364, -687, -544, -564, -681, -397, -765, -195, -793, 0, -768, 224, -697, 398, -616, 522, -583, 557 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
 [node name="turnrate" type="Timer" parent="."]
 one_shot = true
