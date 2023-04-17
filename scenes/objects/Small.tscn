@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/images/enemies/smallEnemy.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/enemies/smallEnemy.png" type="Texture2D" id=1]
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 4
@@ -31,7 +31,7 @@ radius = 100.005
 [node name="Small" type="Area2D"]
 position = Vector2( 502, 306 )
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 frames = SubResource( 6 )
 frame = 1
 playing = true
@@ -39,4 +39,4 @@ playing = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 7 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

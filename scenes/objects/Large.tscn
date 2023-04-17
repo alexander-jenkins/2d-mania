@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/images/enemies/circleEnemy.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/enemies/circleEnemy.png" type="Texture2D" id=1]
 [ext_resource path="res://scripts/enemies/Large.gd" type="Script" id=2]
 
 [sub_resource type="SpriteFrames" id=3]
@@ -16,15 +16,15 @@ position = Vector2( 509, 327 )
 scale = Vector2( 0.4, 0.4 )
 script = ExtResource( 2 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2( 1, 1 )
 frames = SubResource( 3 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 scale = Vector2( 1, 1 )
-polygon = PoolVector2Array( 5, -57, 574, 553, 630, 496, 697, 392, 750, 271, 786, 113, 785, -70, 729, -285, 639, -447, 518, -576, 380, -678, 218, -747, 31, -775, -156, -763, -364, -687, -544, -564, -681, -397, -765, -195, -793, 0, -768, 224, -697, 398, -616, 522, -583, 557 )
+polygon = PackedVector2Array( 5, -57, 574, 553, 630, 496, 697, 392, 750, 271, 786, 113, 785, -70, 729, -285, 639, -447, 518, -576, 380, -678, 218, -747, 31, -775, -156, -763, -364, -687, -544, -564, -681, -397, -765, -195, -793, 0, -768, 224, -697, 398, -616, 522, -583, 557 )
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [node name="turnrate" type="Timer" parent="."]
 one_shot = true
