@@ -1,15 +1,52 @@
 extends Area2D
-var spin = 100
-@export var turn = 1
-@export var Min = 1
-@export var Max = 2
-@onready var rate := $turnrate
+export var Hspin = 0
+export var spin = 200
+export var turn = 1
+export var Min = 1
+export var Max = 2
+onready var rate := $turnrate
+onready var wait := $waitTime
+onready var stop := $stopTime
+var start: bool = false
+var object: Player = null
 
 func _ready():
+	Hspin = spin
+	wait.start(1)
 	randomize()
+	var x = rand_range(0,100)
+	if x <= 50:
+		turn = 1
+	else:
+		turn = -1
 
 func _process(delta):
 	if rate.is_stopped():
+		spin = 0
+		stop.start(0.5)
 		turn *= -1
-		rate.start(randf_range(Min,Max))
-	rotation_degrees += spin * turn * delta 
+		rate.start(rand_range(Min,Max))
+	if start == true:
+		rotation_degrees += spin * turn * delta 
+	if object != null:
+		object.death()
+
+
+func _on_Large_area_entered(area):
+	if area is Player:
+		object = area
+
+
+
+func _on_Large_area_exited(area):
+	if area is Player:
+		object = null
+
+
+func _on_waitTime_timeout():
+	start = true
+
+
+
+func _on_stopTime_timeout():
+	spin = Hspin
