@@ -15,10 +15,15 @@ position = Vector2( 3.00006, 1.00003 )
 [node name="Large" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1.99994, 1.00003 )
 
-[node name="Control" parent="." instance=ExtResource( 3 )]
-margin_left = -633.0
-margin_top = -350.0
-margin_right = -571.0
-margin_bottom = -291.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 3 )]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 69.0
+margin_bottom = 69.0
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="point" type="Node2D" parent="."]

@@ -7,6 +7,7 @@ size = 75
 font_data = ExtResource( 1 )
 
 [node name="Control" type="Control"]
+light_mask = 12
 margin_left = 15.0
 margin_top = 19.0
 margin_right = 1274.0
@@ -22,9 +23,9 @@ text = "00"
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 467.0
-margin_top = 272.0
+margin_top = 311.0
 margin_right = 816.0
-margin_bottom = 338.0
+margin_bottom = 377.0
 custom_fonts/font = SubResource( 1 )
 text = "You lose"
 
