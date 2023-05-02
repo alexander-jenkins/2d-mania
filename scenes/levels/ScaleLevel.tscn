@@ -34,3 +34,6 @@ layer = 4
 
 [node name="point" type="Node2D" parent="."]
 position = Vector2( 640, 360 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

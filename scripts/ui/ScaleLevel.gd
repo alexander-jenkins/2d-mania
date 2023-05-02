@@ -7,6 +7,7 @@ onready var timer := $CanvasLayer/Control/Timer
 onready var title := $CanvasLayer/Control/Label2
 
 onready var Tir := $Triangle
+onready var startCl := $Timer
 
 onready var left := $monsterSpawn/left
 onready var right := $monsterSpawn/right
@@ -25,7 +26,9 @@ func _ready():
 	Signals.connect("deaded",self,"_deaded")
 	title.hide()
 	clock.text = str(x)
+	startCl.start(0.8)
 	timer.start(1)
+	
 	randomize()
 	var start = rand_range(0,100)
 	if start < 50:
@@ -34,14 +37,15 @@ func _ready():
 		side = -1
 
 func _physics_process(_delta):
-	if Ratetime.is_stopped() and Monster != true:
-		if side == -1:
-			fireHor()
-			side *= -1
-		else:
-			fireVer()
-			side *= -1
-		Ratetime.start(fireRate)
+	if startCl.is_stopped():
+		if Ratetime.is_stopped() and Monster != true:
+			if side == -1:
+				fireHor()
+				side *= -1
+			else:
+				fireVer()
+				side *= -1
+			Ratetime.start(fireRate)
 
 func fireHor():
 	var rang = rand_range(-100,100)
@@ -92,8 +96,9 @@ func nextLevel():
 	clock.hide()
 	title.show()
 	title.text = str("YOU WIN")
+	Score._scoreIncrease(1)
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/levels/RotateLevel.tscn")
+	SceneTransition.change_scene("res://scenes/levels/RotateLevel.tscn", "circle")
 
 func _deaded():
 	death = true

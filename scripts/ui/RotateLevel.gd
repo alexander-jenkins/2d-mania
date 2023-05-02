@@ -37,8 +37,9 @@ func nextLevel():
 	Monster.set_deferred("monitoring", false)
 	title.show()
 	title.text = str("YOU WIN")
+	Score._scoreIncrease(1)
 # warning-ignore:return_value_discarded
-	get_tree().change_scene("res://scenes/levels/ScaleLevel.tscn")
+	SceneTransition.change_scene("res://scenes/levels/ScaleLevel.tscn", "triangle")
 
 
 func _deaded():

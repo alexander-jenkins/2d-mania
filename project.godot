@@ -34,6 +34,8 @@ config/icon="res://assets/images/player/reflectionLevelCharacter.png"
 [autoload]
 
 Signals="*res://scripts/ui/signals.gd"
+SceneTransition="*res://scenes/objects/UI/Scene_transition.tscn"
+Score="*res://scenes/objects/UI/score.tscn"
 
 [display]
 
