@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjbas8i61mx4h"]
+[gd_scene load_steps=2 format=3 uid="uid://bgk4ijp4u3l20"]
 
-[ext_resource path="res://scenes/objects/enemies/Large.tscn" type="PackedScene" id=1]
+[ext_resource type="PackedScene" uid="uid://w14t8ecnalg6" path="res://scenes/objects/enemies/Large.tscn" id="1"]
 
 [node name="testLevel" type="Node2D"]
 

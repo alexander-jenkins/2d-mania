@@ -1,20 +1,22 @@
 extends Area2D
-export var Hspin = 0
-export var spin = 200
-export var turn = 1
-export var Min = 1
-export var Max = 2
-onready var rate := $turnrate
-onready var wait := $waitTime
-onready var stop := $stopTime
+@export var Hspin = 0
+@export var spin = 200
+@export var turn = 1
+@export var Min = 1
+@export var Max = 2
+@onready var rate := $turnrate
+@onready var wait := $waitTime
+@onready var stop := $stopTime
+@onready var anime := $AnimatedSprite2D
 var start: bool = false
 var object: Player = null
 
 func _ready():
+	anime.play("default")
 	Hspin = spin
 	wait.start(1)
 	randomize()
-	var x = rand_range(0,100)
+	var x = randf_range(0,100)
 	if x <= 50:
 		turn = 1
 	else:
@@ -25,10 +27,12 @@ func _process(delta):
 		spin = 0
 		stop.start(0.5)
 		turn *= -1
-		rate.start(rand_range(Min,Max))
+		rate.start(randf_range(Min,Max))
 	if start == true:
 		rotation_degrees += spin * turn * delta 
 	if object != null:
+		start = false
+		anime.play("bit")
 		object.death()
 
 

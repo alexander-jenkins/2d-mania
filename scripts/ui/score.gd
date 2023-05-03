@@ -1,7 +1,7 @@
 extends Control
 
-export var score = 0
-onready var scoreLabel := $Label
+@export var score = 0
+@onready var scoreLabel := $Label
 
 func _ready():
 	scoreLabel.text = str(score)

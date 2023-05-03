@@ -1,7 +1,7 @@
 extends Player
 
 
-export var spin= 300
+@export var spin= 300
 var direction = 0
 
 func _ready():

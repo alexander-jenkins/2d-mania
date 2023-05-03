@@ -1,7 +1,7 @@
 extends Player
 
-export var changeX = 2
-export var changeY = 2
+@export var changeX = 2
+@export var changeY = 2
 
 func _ready():
 	scale.x = 2

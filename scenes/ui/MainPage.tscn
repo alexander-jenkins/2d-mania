@@ -1,0 +1,166 @@
+[gd_scene load_steps=5 format=3 uid="uid://bffx67yw8vbnq"]
+
+[ext_resource type="Script" path="res://scripts/ui/MainPage.gd" id="1_6donm"]
+[ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="1_oow7h"]
+[ext_resource type="Texture2D" uid="uid://ddrkqas1yf6m0" path="res://assets/images/enemies/Title.png" id="2_kpjv1"]
+
+[sub_resource type="FontFile" id="FontFile_mebdj"]
+fallbacks = Array[Font]([ExtResource("1_oow7h")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/1000/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/10/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/1000/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/1000/0/ascent = 0.0
+cache/0/1000/0/descent = 0.0
+cache/0/1000/0/underline_position = 0.0
+cache/0/1000/0/underline_thickness = 0.0
+cache/0/1000/0/scale = 1.0
+cache/0/1000/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/1000/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/1000/0/kerning_overrides/1000/0 = Vector2(0, 0)
+cache/0/1000/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/1000/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/1000/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/1000/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/1000/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/1000/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/1000/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/1000/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/150/0/ascent = 0.0
+cache/0/150/0/descent = 0.0
+cache/0/150/0/underline_position = 0.0
+cache/0/150/0/underline_thickness = 0.0
+cache/0/150/0/scale = 1.0
+cache/0/150/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/1000/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/150/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/1000/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/150/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
+
+[node name="MainPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6donm")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 297.0
+offset_right = 1008.0
+offset_bottom = 392.0
+theme_override_fonts/font = SubResource("FontFile_mebdj")
+theme_override_font_sizes/font_size = 80
+text = "Play"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 755.0
+offset_top = 459.0
+offset_right = 1078.0
+offset_bottom = 537.0
+theme_override_fonts/font = SubResource("FontFile_mebdj")
+theme_override_font_sizes/font_size = 50
+text = "How to Play"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1041.0
+offset_top = 629.0
+offset_right = 1249.0
+offset_bottom = 690.0
+theme_override_fonts/font = SubResource("FontFile_mebdj")
+theme_override_font_sizes/font_size = 50
+text = "Credits
+"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 141.0
+offset_top = 1.0
+offset_right = 791.0
+offset_bottom = 586.0
+texture = ExtResource("2_kpjv1")
+expand_mode = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

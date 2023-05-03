@@ -1,12 +1,13 @@
 extends Area2D
 
-export var speedx = 800
-export var direction = -1
-export var UpORDown: bool = false
+@onready var anime := $AnimatedSprite2D
+@export var speedx = 800
+@export var direction = -1
+@export var UpORDown: bool = false
 var object: Player = null
 
 func _ready():
-	pass # Replace with function body.
+	anime.play("default")
 
 func _physics_process(delta):
 	if UpORDown == false:

@@ -1,27 +1,127 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=3 uid="uid://w14t8ecnalg6"]
 
-[ext_resource path="res://assets/images/enemies/circleEnemy.png" type="Texture2D" id=1]
-[ext_resource path="res://scripts/enemies/Large.gd" type="Script" id=2]
+[ext_resource type="Script" path="res://scripts/enemies/Large.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cnqpps1tapxoj" path="res://assets/images/enemies/circleEnemySHEET.png" id="2_7vfqc"]
 
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 1 ) ],
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndvat"]
+atlas = ExtResource("2_7vfqc")
+region = Rect2(1800, 1800, 1800, 1800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rylu"]
+atlas = ExtResource("2_7vfqc")
+region = Rect2(3600, 1800, 1800, 1800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slt1y"]
+atlas = ExtResource("2_7vfqc")
+region = Rect2(5400, 1800, 1800, 1800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k51cl"]
+atlas = ExtResource("2_7vfqc")
+region = Rect2(7200, 1800, 1800, 1800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61rp2"]
+atlas = ExtResource("2_7vfqc")
+region = Rect2(0, 0, 1800, 1800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oiksr"]
+atlas = ExtResource("2_7vfqc")
+region = Rect2(1800, 0, 1800, 1800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbnyi"]
+atlas = ExtResource("2_7vfqc")
+region = Rect2(3600, 0, 1800, 1800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ndx1"]
+atlas = ExtResource("2_7vfqc")
+region = Rect2(7200, 0, 1800, 1800)
+
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndvat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rylu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slt1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rylu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k51cl")
+}],
+"loop": false,
+"name": &"bit",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61rp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiksr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbnyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiksr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61rp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiksr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbnyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiksr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61rp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiksr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbnyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiksr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61rp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ndx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbnyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiksr")
+}],
 "loop": true,
-"name": "default",
-"speed": 24.0
-} ]
+"name": &"default",
+"speed": 8.0
+}]
 
 [node name="Large" type="Area2D"]
-position = Vector2( 509, 327 )
-scale = Vector2( 0.4, 0.4 )
-script = ExtResource( 2 )
+position = Vector2(509, 327)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("2")
 spin = 100
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 3 )
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("3")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 5, -57, 635, 490, 665, 442.5, 697, 392, 750, 271, 786, 113, 785, -70, 729, -285, 639, -447, 518, -576, 380, -678, 218, -747, 31, -775, -156, -763, -364, -687, -544, -564, -681, -397, -765, -195, -793, 0, -768, 224, -697, 398, -660, 455, -637.5, 487.5 )
+polygon = PackedVector2Array(5, -57, 635, 490, 665, 442.5, 697, 392, 750, 271, 786, 113, 785, -70, 729, -285, 639, -447, 518, -576, 380, -678, 218, -747, 31, -775, -156, -763, -364, -687, -544, -564, -681, -397, -765, -195, -793, 0, -768, 224, -697, 398, -660, 455, -637.5, 487.5)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 

@@ -1,12 +1,12 @@
 extends Node2D
 
-onready var clock := $CanvasLayer/Control/Label
-onready var timer := $CanvasLayer/Control/Timer
-onready var title := $CanvasLayer/Control/Label2
-onready var point := $point
-onready var cir := $Circle
-onready var Monster := $Large
-onready var wait := $Timer
+@onready var clock := $CanvasLayer/Control/Label
+@onready var timer := $CanvasLayer/Control/Timer
+@onready var title := $CanvasLayer/Control/Label2
+@onready var point := $point
+@onready var cir := $Circle
+@onready var Monster := $Large
+@onready var wait := $Timer
 var isNextStage: bool = false
 var ScaleLVL := preload("res://scenes/levels/ScaleLevel.tscn")
 
@@ -15,7 +15,7 @@ var death: bool = false
 
 func _ready():
 # warning-ignore:return_value_discarded
-	Signals.connect("deaded",self,"_deaded")
+	Signals.connect("deaded", Callable(self, "_deaded"))
 	title.hide()
 	clock.text = str(x)
 	timer.start(1)
@@ -39,13 +39,13 @@ func nextLevel():
 	title.text = str("YOU WIN")
 	Score._scoreIncrease(1)
 # warning-ignore:return_value_discarded
-	SceneTransition.change_scene("res://scenes/levels/ScaleLevel.tscn", "triangle")
+	SceneTransition.change_scene_to_file("res://scenes/levels/ScaleLevel.tscn", "triangle")
 
 
 func _deaded():
 	death = true
 	clock.hide()
-	Monster.hide()
+	#Monster.hide()
 	Monster.set_deferred("monitoring", false)
 	title.show()
 	title.text = str("YOU LOSE")
