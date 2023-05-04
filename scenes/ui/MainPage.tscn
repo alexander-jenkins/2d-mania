@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bffx67yw8vbnq"]
+[gd_scene load_steps=6 format=3 uid="uid://bffx67yw8vbnq"]
 
 [ext_resource type="Script" path="res://scripts/ui/MainPage.gd" id="1_6donm"]
 [ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="1_oow7h"]
-[ext_resource type="Texture2D" uid="uid://ddrkqas1yf6m0" path="res://assets/images/enemies/Title.png" id="2_kpjv1"]
+[ext_resource type="Texture2D" uid="uid://1423q6jc38xf" path="res://assets/images/player/BackGround.png" id="2_kcryc"]
+[ext_resource type="Texture2D" uid="uid://cas5hyfe6pvgy" path="res://assets/images/enemies/Logo-1.png" id="3_guyog"]
 
 [sub_resource type="FontFile" id="FontFile_mebdj"]
 fallbacks = Array[Font]([ExtResource("1_oow7h")])
@@ -123,22 +124,28 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6donm")
 
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_kcryc")
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 806.0
-offset_top = 297.0
-offset_right = 1008.0
-offset_bottom = 392.0
+offset_left = 950.0
+offset_top = 275.0
+offset_right = 1152.0
+offset_bottom = 370.0
 theme_override_fonts/font = SubResource("FontFile_mebdj")
 theme_override_font_sizes/font_size = 80
 text = "Play"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 755.0
-offset_top = 459.0
-offset_right = 1078.0
-offset_bottom = 537.0
+offset_left = 900.0
+offset_top = 451.0
+offset_right = 1223.0
+offset_bottom = 529.0
 theme_override_fonts/font = SubResource("FontFile_mebdj")
 theme_override_font_sizes/font_size = 50
 text = "How to Play"
@@ -156,11 +163,11 @@ text = "Credits
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 141.0
-offset_top = 1.0
-offset_right = 791.0
-offset_bottom = 586.0
-texture = ExtResource("2_kpjv1")
+offset_left = 88.0
+offset_top = 74.0
+offset_right = 842.0
+offset_bottom = 601.0
+texture = ExtResource("3_guyog")
 expand_mode = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

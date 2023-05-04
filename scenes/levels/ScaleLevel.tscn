@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://6crhrot1g3q"]
+[gd_scene load_steps=5 format=3 uid="uid://6crhrot1g3q"]
 
 [ext_resource type="PackedScene" path="res://scenes/objects/players/Tirangle.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/ui/ScaleLevel.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bhs8fmrjd3phk" path="res://assets/images/player/triangleBG.png" id="2_pif8p"]
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="3"]
 
 [node name="ScaleLevel" type="Node2D"]
 script = ExtResource("2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_pif8p")
 
 [node name="Triangle" parent="." instance=ExtResource("1")]
 

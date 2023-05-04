@@ -1,9 +1,10 @@
 extends Control
 
 @export var score = 0
-@onready var scoreLabel := $Label
+@onready var scoreLabel := $CanvasLayer/Label
 
 func _ready():
+	
 	scoreLabel.text = str(score)
 
 

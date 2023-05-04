@@ -1,13 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://uilgahah5lt7"]
+[gd_scene load_steps=6 format=3 uid="uid://uilgahah5lt7"]
 
 [ext_resource type="PackedScene" path="res://scenes/objects/players/Circle.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://w14t8ecnalg6" path="res://scenes/objects/enemies/Large.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://480l3ixo4hrl" path="res://assets/images/player/CircleBG.png" id="2_rjptd"]
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="3"]
 [ext_resource type="Script" path="res://scripts/ui/RotateLevel.gd" id="4"]
 
 [node name="RotateLevel" type="Node2D"]
 position = Vector2(640, 360)
 script = ExtResource("4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.909804, 0.639216, 0.627451, 1)
+offset_left = -668.0
+offset_top = -384.0
+offset_right = 658.0
+offset_bottom = 373.0
+texture = ExtResource("2_rjptd")
 
 [node name="Circle" parent="." instance=ExtResource("1")]
 position = Vector2(3.00006, 1.00003)
@@ -21,8 +30,8 @@ layer = 4
 [node name="Control" parent="CanvasLayer" instance=ExtResource("3")]
 offset_left = 7.0
 offset_top = 10.0
-offset_right = 69.0
-offset_bottom = 69.0
+offset_right = 1270.0
+offset_bottom = 742.0
 
 [node name="Timer" type="Timer" parent="."]
 

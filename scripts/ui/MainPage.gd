@@ -6,7 +6,7 @@ extends Control
 
 var levels = [
 	"res://scenes/levels/RotateLevel.tscn",
-	"res://scenes/levels/ScaleLevel.tscn"
+	"res://scenes/levels/ScaleLevel.tscn",
 ]
 
 func _ready():
