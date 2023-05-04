@@ -2,6 +2,7 @@ extends Node2D
 
 var pmonster := preload("res://scenes/objects/enemies/Long.tscn")
 
+@onready var buttons := $Buttons
 @onready var clock := $CanvasLayer/Control/Label
 @onready var timer := $CanvasLayer/Control/Timer
 @onready var title := $CanvasLayer/Control/Label2
@@ -25,6 +26,7 @@ func _ready():
 # warning-ignore:return_value_discarded
 	Signals.connect("deaded", Callable(self, "_deaded"))
 	title.hide()
+	buttons.hide()
 	clock.text = str(x)
 	startCl.start(0.8)
 	timer.start(1)
@@ -103,6 +105,7 @@ func nextLevel():
 func _deaded():
 	death = true
 	Monster = true
+	buttons.show()
 	clock.hide()
 	title.show()
 	title.text = str("YOU LOSE")

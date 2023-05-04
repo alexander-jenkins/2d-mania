@@ -1,16 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://6crhrot1g3q"]
+[gd_scene load_steps=6 format=3 uid="uid://6crhrot1g3q"]
 
 [ext_resource type="PackedScene" path="res://scenes/objects/players/Tirangle.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/ui/ScaleLevel.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://bhs8fmrjd3phk" path="res://assets/images/player/triangleBG.png" id="2_pif8p"]
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://b13arossmgg0l" path="res://scenes/ui/buttons.tscn" id="5_vxmw4"]
 
 [node name="ScaleLevel" type="Node2D"]
 script = ExtResource("2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1280.0
+offset_bottom = 720.0
 texture = ExtResource("2_pif8p")
 
 [node name="Triangle" parent="." instance=ExtResource("1")]
@@ -39,11 +40,13 @@ layer = 4
 [node name="Control" parent="CanvasLayer" instance=ExtResource("3")]
 offset_left = 0.0
 offset_top = 0.0
-offset_right = 1259.0
-offset_bottom = 698.0
+offset_right = 87.0
+offset_bottom = 102.0
 
 [node name="point" type="Node2D" parent="."]
 position = Vector2(640, 360)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Buttons" parent="." instance=ExtResource("5_vxmw4")]

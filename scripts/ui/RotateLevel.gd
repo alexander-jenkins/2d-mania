@@ -1,5 +1,7 @@
 extends Node2D
 
+
+@onready var buttons := $Buttons
 @onready var clock := $CanvasLayer/Control/Label
 @onready var timer := $CanvasLayer/Control/Timer
 @onready var title := $CanvasLayer/Control/Label2
@@ -15,6 +17,7 @@ var death: bool = false
 
 func _ready():
 # warning-ignore:return_value_discarded
+	buttons.hide()
 	Signals.connect("deaded", Callable(self, "_deaded"))
 	title.hide()
 	clock.text = str(x)
@@ -46,9 +49,17 @@ func _deaded():
 	death = true
 	clock.hide()
 	#Monster.hide()
+	buttons.show()
 	Monster.set_deferred("monitoring", false)
 	title.show()
 	title.text = str("YOU LOSE")
+
+
+
+
+func _on_retry_pressed():
+	SceneTransition.change_scene_to_file("res://scenes/levels/ScaleLevel.tscn", "triangle")
+	Score._deaded()
 
 
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://uilgahah5lt7"]
+[gd_scene load_steps=7 format=3 uid="uid://uilgahah5lt7"]
 
 [ext_resource type="PackedScene" path="res://scenes/objects/players/Circle.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://w14t8ecnalg6" path="res://scenes/objects/enemies/Large.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://480l3ixo4hrl" path="res://assets/images/player/CircleBG.png" id="2_rjptd"]
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="3"]
 [ext_resource type="Script" path="res://scripts/ui/RotateLevel.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://b13arossmgg0l" path="res://scenes/ui/buttons.tscn" id="6_6aoir"]
 
 [node name="RotateLevel" type="Node2D"]
 position = Vector2(640, 360)
@@ -30,9 +31,15 @@ layer = 4
 [node name="Control" parent="CanvasLayer" instance=ExtResource("3")]
 offset_left = 7.0
 offset_top = 10.0
-offset_right = 1270.0
-offset_bottom = 742.0
+offset_right = 188.0
+offset_bottom = 144.0
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="point" type="Node2D" parent="."]
+
+[node name="Buttons" parent="." instance=ExtResource("6_6aoir")]
+offset_left = -639.0
+offset_top = -344.0
+offset_right = -639.0
+offset_bottom = -344.0
