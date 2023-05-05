@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bffx67yw8vbnq"]
+[gd_scene load_steps=11 format=3 uid="uid://bffx67yw8vbnq"]
 
 [ext_resource type="Script" path="res://scripts/ui/MainPage.gd" id="1_6donm"]
 [ext_resource type="Texture2D" uid="uid://1423q6jc38xf" path="res://assets/images/player/BackGround.png" id="2_kcryc"]
 [ext_resource type="Texture2D" uid="uid://cas5hyfe6pvgy" path="res://assets/images/enemies/Logo-1.png" id="3_guyog"]
 [ext_resource type="Texture2D" uid="uid://cq05g16tugb54" path="res://assets/images/player/play.png" id="3_mlpmm"]
 [ext_resource type="Texture2D" uid="uid://cp3jua27puhg1" path="res://assets/images/player/howtoplay.png" id="4_ewljg"]
+[ext_resource type="Texture2D" uid="uid://buyanyo54cajt" path="res://assets/images/player/playHOVER.png" id="4_ng1i4"]
 [ext_resource type="Texture2D" uid="uid://3tmr1jq8yfdc" path="res://assets/images/player/credit.png" id="5_18pbx"]
+[ext_resource type="Texture2D" uid="uid://f0cwvukp4qg6" path="res://assets/images/player/howtoplayHOVER.png" id="6_lfv13"]
+[ext_resource type="PackedScene" uid="uid://qsl2fl88rinx" path="res://scenes/ui/bg_particles.tscn" id="7_atpji"]
+[ext_resource type="Texture2D" uid="uid://dh7e0opsevas3" path="res://assets/images/player/creditHOVER.png" id="8_gjywu"]
 
 [node name="MainPage" type="Control"]
 layout_mode = 3
@@ -16,44 +20,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6donm")
 
-[node name="BG" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="BG" type="TextureRect" parent="CanvasLayer3"]
+offset_right = 1280.0
+offset_bottom = 720.0
 texture = ExtResource("2_kcryc")
 
-[node name="Button" type="TextureButton" parent="."]
-layout_mode = 0
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Button" type="TextureButton" parent="CanvasLayer2"]
 offset_left = 706.0
 offset_top = -2.0
 offset_right = 1398.0
 offset_bottom = 437.0
 texture_normal = ExtResource("3_mlpmm")
+texture_pressed = ExtResource("3_mlpmm")
+texture_hover = ExtResource("4_ng1i4")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Button2" type="TextureButton" parent="."]
-layout_mode = 0
+[node name="Button2" type="TextureButton" parent="CanvasLayer2"]
 offset_left = 821.0
 offset_top = 243.0
 offset_right = 1297.0
 offset_bottom = 545.0
 texture_normal = ExtResource("4_ewljg")
+texture_hover = ExtResource("6_lfv13")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Button3" type="TextureButton" parent="."]
-layout_mode = 0
+[node name="Button3" type="TextureButton" parent="CanvasLayer2"]
 offset_left = 899.0
 offset_top = 414.0
 offset_right = 1235.0
 offset_bottom = 629.0
 texture_normal = ExtResource("5_18pbx")
+texture_hover = ExtResource("8_gjywu")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
 offset_left = 126.0
 offset_top = 78.0
 offset_right = 880.0
@@ -61,4 +69,10 @@ offset_bottom = 605.0
 texture = ExtResource("3_guyog")
 expand_mode = 1
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="BG_particles" parent="CanvasLayer" instance=ExtResource("7_atpji")]
+position = Vector2(-4, -127)
+
+[connection signal="pressed" from="CanvasLayer2/Button" to="." method="_on_button_pressed"]

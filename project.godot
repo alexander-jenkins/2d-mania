@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SlideFilpRise"
-run/main_scene="res://scenes/levels/testLevel.tscn"
+run/main_scene="res://scenes/ui/MainPage.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://assets/images/player/reflectionLevelCharacter.png"
 
@@ -29,6 +29,7 @@ window/stretch/mode="viewport"
 
 [editor]
 
+movie_writer/fps=24
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 version_control_autoload_on_startup=true

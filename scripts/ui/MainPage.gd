@@ -1,8 +1,6 @@
 extends Control
 
-@onready var start := $Button
-@onready var how2 := $Button2
-@onready var credit := $Button3
+
 
 var levels = [
 	"res://scenes/levels/RotateLevel.tscn",

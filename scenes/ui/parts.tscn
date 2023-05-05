@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwykg30801qrs"]
+
+[ext_resource type="Texture2D" uid="uid://dd8c8wsw3vsbo" path="res://assets/images/player/tite.png" id="1_fj4qo"]
+[ext_resource type="Script" path="res://scripts/ui/parts.gd" id="1_xl4se"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gd1h6"]
+atlas = ExtResource("1_fj4qo")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5nvo"]
+atlas = ExtResource("1_fj4qo")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kmkk"]
+atlas = ExtResource("1_fj4qo")
+region = Rect2(600, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtgl0"]
+atlas = ExtResource("1_fj4qo")
+region = Rect2(900, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkem3"]
+atlas = ExtResource("1_fj4qo")
+region = Rect2(1200, 0, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ngjil"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gd1h6")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5nvo")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kmkk")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtgl0")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkem3")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vickq"]
+radius = 134.373
+
+[node name="parts" type="Area2D"]
+modulate = Color(1, 1, 1, 0.643137)
+position = Vector2(654, 209)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_xl4se")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ngjil")
+animation = &"0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vickq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-2.28882e-05, -2.99999)
+scale = Vector2(13.4, 12.9)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

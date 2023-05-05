@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://qsl2fl88rinx"]
+
+[ext_resource type="Script" path="res://scripts/ui/bg_particles.gd" id="1_ff1mr"]
+
+[node name="BG_particles" type="Node2D"]
+position = Vector2(6, -127)
+script = ExtResource("1_ff1mr")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
