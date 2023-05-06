@@ -50,6 +50,7 @@ func _deaded():
 	clock.hide()
 	#Monster.hide()
 	buttons.show()
+	Score.stopMusic()
 	Monster.set_deferred("monitoring", false)
 	title.show()
 	title.text = str("YOU LOSE")

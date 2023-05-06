@@ -106,6 +106,7 @@ func _deaded():
 	death = true
 	Monster = true
 	buttons.show()
+	Score.stopMusic()
 	clock.hide()
 	title.show()
 	title.text = str("YOU LOSE")

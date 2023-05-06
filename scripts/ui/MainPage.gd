@@ -14,6 +14,8 @@ func _ready():
 
 
 func _on_button_pressed():
+	$confirm.play()
+	await $confirm.finished
 	Signals.emit_signal("startGame")
 	var x = randi_range(0,1)
 	SceneTransition.change_scene_to_file(levels[x], "dissolve")

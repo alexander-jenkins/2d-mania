@@ -32,6 +32,7 @@ func _process(delta):
 		rotation_degrees += spin * turn * delta 
 	if object != null:
 		start = false
+		$sound.play()
 		anime.play("bit")
 		object.death()
 

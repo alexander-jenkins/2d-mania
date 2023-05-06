@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://w14t8ecnalg6"]
+[gd_scene load_steps=13 format=3 uid="uid://w14t8ecnalg6"]
 
 [ext_resource type="Script" path="res://scripts/enemies/Large.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://cnqpps1tapxoj" path="res://assets/images/enemies/circleEnemySHEET.png" id="2_7vfqc"]
+[ext_resource type="AudioStream" uid="uid://fgoptdd5s8gv" path="res://assets/sounds/eatingsfxwav-14588.wav" id="3_4tdi1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ndvat"]
 atlas = ExtResource("2_7vfqc")
@@ -132,6 +133,10 @@ one_shot = true
 one_shot = true
 
 [node name="stopTime" type="Timer" parent="."]
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4tdi1")
+volume_db = 10.0
 
 [connection signal="area_entered" from="." to="." method="_on_Large_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_Large_area_exited"]

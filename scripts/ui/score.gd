@@ -2,6 +2,8 @@ extends Control
 
 @export var score = 0
 @onready var scoreLabel := $CanvasLayer/Label
+@onready var music1 := $CanvasLayer/AudioStreamPlayer
+@onready var Gameover := $CanvasLayer/AudioStreamPlayer2
 
 func _ready():
 	scoreLabel.hide()
@@ -10,14 +12,21 @@ func _ready():
 
 func _startGame():
 	scoreLabel.show()
+	music1.play()
+
+func stopMusic():
+	music1.stop()
+	Gameover.play()
 
 func _endGame():
 	scoreLabel.hide()
+	music1.stop()
 
 func _scoreIncrease(amonut):
 	score += amonut
 	print(score)
 	scoreLabel.text = str(score)
+	
 
 func _deaded():
 	score = 0
