@@ -15,7 +15,9 @@ var pmonster := preload("res://scenes/objects/enemies/Long.tscn")
 @onready var up := $monsterSpawn/up
 @onready var down := $monsterSpawn/down
 @onready var Ratetime := $rate
-@export var fireRate := 3
+@export var fireRate := 3.5
+var speedx = 800
+var speedy = 700
 var side = -1
 
 var x: int = 10
@@ -25,6 +27,28 @@ var Monster: bool = false
 func _ready():
 # warning-ignore:return_value_discarded
 	Signals.connect("deaded", Callable(self, "_deaded"))
+	var score = Score.returnSocre()
+	if score > 5:
+		speedx = 800
+		speedy = 700
+		fireRate = 3
+	elif score > 10:
+		speedx = 900
+		speedy = 900
+		fireRate = 2.9
+	elif score > 18:
+		speedx = 1000
+		speedy = 1000
+		fireRate = 2.8
+	elif score > 26:
+		speedx = 1100
+		speedy = 1200
+		fireRate = 2.6
+	elif score > 34:
+		speedx = 1200
+		speedy = 1300
+		fireRate = 2.5
+	
 	title.hide()
 	buttons.hide()
 	clock.text = str(x)
@@ -57,6 +81,7 @@ func fireHor():
 	Rmonster.UpORDown = false
 	Rmonster.position.y += rang 
 	Rmonster.direction = -1
+	Rmonster.speedx = speedx
 	get_tree().current_scene.add_child(Rmonster)
 	
 	var Lmonster := pmonster.instantiate()
@@ -64,6 +89,7 @@ func fireHor():
 	Lmonster.UpORDown = false
 	Lmonster.position.y += rang * -1
 	Lmonster.direction = 1
+	Lmonster.speedx = speedx
 	get_tree().current_scene.add_child(Lmonster)
 
 func fireVer():
@@ -75,6 +101,7 @@ func fireVer():
 	Umonster.UpORDown = true
 	Umonster.direction = 1
 	Umonster.position.x += rang 
+	Umonster.speedx = speedy
 	get_tree().current_scene.add_child(Umonster)
 	
 	var Dmonster := pmonster.instantiate()
@@ -82,6 +109,7 @@ func fireVer():
 	Dmonster.direction = -1
 	Dmonster.position.x += rang * -1
 	Dmonster.UpORDown = true
+	Dmonster.speedx = speedy
 	get_tree().current_scene.add_child(Dmonster)
 
 func _process(_delta):

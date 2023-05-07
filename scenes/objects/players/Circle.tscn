@@ -1,29 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://kwj0123lvmw2"]
 
-[ext_resource path="res://assets/images/player/rotationLevelCharacter.png" type="Texture2D" id=1]
-[ext_resource path="res://scripts/player/Circle.gd" type="Script" id=2]
+[ext_resource type="Texture2D" uid="uid://rjfpiot7stva" path="res://assets/images/player/rotationLevelCharacter.png" id="1"]
+[ext_resource type="Script" path="res://scripts/player/Circle.gd" id="2"]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 1 ) ],
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
-} ]
+}]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id="2"]
 radius = 136.004
 
 [node name="Circle" type="Area2D"]
-position = Vector2( 610, 317 )
-scale = Vector2( 0.2, 0.2 )
-script = ExtResource( 2 )
+position = Vector2(610, 317)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2")
 spin = 110
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2( 0, 1195 )
-frames = SubResource( 1 )
+position = Vector2(0, 1195)
+sprite_frames = SubResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 1195 )
-shape = SubResource( 2 )
+position = Vector2(0, 1195)
+shape = SubResource("2")

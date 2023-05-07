@@ -10,6 +10,7 @@ extends Area2D
 @onready var anime := $AnimatedSprite2D
 var start: bool = false
 var object: Player = null
+@export var turnRate = 0.7
 
 func _ready():
 	anime.play("default")
@@ -25,7 +26,7 @@ func _ready():
 func _process(delta):
 	if rate.is_stopped():
 		spin = 0
-		stop.start(0.5)
+		stop.start(turnRate)
 		turn *= -1
 		rate.start(randf_range(Min,Max))
 	if start == true:

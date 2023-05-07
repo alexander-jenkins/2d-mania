@@ -17,7 +17,6 @@ func _physics_process(delta):
 			scale.x = -1
 		position.x += delta * speedx * direction
 	else:
-		speedx = 700
 		if direction == -1:
 			rotation_degrees = 90
 		else:

@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://uilgahah5lt7"]
 
-[ext_resource type="PackedScene" path="res://scenes/objects/players/Circle.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://kwj0123lvmw2" path="res://scenes/objects/players/Circle.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://w14t8ecnalg6" path="res://scenes/objects/enemies/Large.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://480l3ixo4hrl" path="res://assets/images/player/CircleBG.png" id="2_rjptd"]
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="3"]

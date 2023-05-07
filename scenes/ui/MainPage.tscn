@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bffx67yw8vbnq"]
+[gd_scene load_steps=13 format=3 uid="uid://bffx67yw8vbnq"]
 
 [ext_resource type="Script" path="res://scripts/ui/MainPage.gd" id="1_6donm"]
 [ext_resource type="Texture2D" uid="uid://1423q6jc38xf" path="res://assets/images/player/BackGround.png" id="2_kcryc"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://qsl2fl88rinx" path="res://scenes/ui/bg_particles.tscn" id="7_atpji"]
 [ext_resource type="Texture2D" uid="uid://dh7e0opsevas3" path="res://assets/images/player/creditHOVER.png" id="8_gjywu"]
 [ext_resource type="AudioStream" uid="uid://b8252c02k15eg" path="res://assets/sounds/confirm.WAV" id="11_7mly6"]
+[ext_resource type="AudioStream" uid="uid://djnlvj63p0xvl" path="res://assets/music/2D-Mania_8.mp3" id="12_jtdmp"]
 
 [node name="MainPage" type="Control"]
 layout_mode = 3
@@ -78,6 +79,8 @@ position = Vector2(-4, -127)
 
 [node name="confirm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_7mly6")
-volume_db = 10.0
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_jtdmp")
 
 [connection signal="pressed" from="CanvasLayer2/Button" to="." method="_on_button_pressed"]

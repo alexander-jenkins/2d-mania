@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb2osso6qjl3h"]
+[gd_scene load_steps=6 format=3 uid="uid://bb2osso6qjl3h"]
 
 [ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="1"]
 [ext_resource type="Script" path="res://scripts/ui/score.gd" id="2"]
 [ext_resource type="AudioStream" uid="uid://dn7d8uupuvhme" path="res://assets/music/Marching Pixels_14.mp3" id="3_tcum5"]
 [ext_resource type="AudioStream" uid="uid://dcqgmtwm388mw" path="res://assets/sounds/game-over-arcade-6435.wav" id="4_j36g1"]
-[ext_resource type="AudioStream" uid="uid://djnlvj63p0xvl" path="res://assets/music/2D-Mania_8.mp3" id="5_qjt2s"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
@@ -39,10 +38,10 @@ script = ExtResource("2")
 layer = 4
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 36.0
-offset_top = 26.0
-offset_right = 124.0
-offset_bottom = 116.0
+offset_left = 64.0
+offset_top = 39.0
+offset_right = 152.0
+offset_bottom = 129.0
 theme_override_fonts/font = SubResource("1")
 theme_override_font_sizes/font_size = 100
 text = "0"
@@ -54,6 +53,3 @@ stream = ExtResource("3_tcum5")
 stream = ExtResource("4_j36g1")
 volume_db = 5.0
 pitch_scale = 0.76
-
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="CanvasLayer"]
-stream = ExtResource("5_qjt2s")

@@ -16,7 +16,25 @@ var x: int = 10
 var death: bool = false
 
 func _ready():
+	cir.spin = 100
 # warning-ignore:return_value_discarded
+	var score = Score.returnSocre()
+	if score > 5:
+		Monster.turnRate = 0.5
+		cir.spin = 110
+	elif score > 10:
+		Monster.turnRate = 0.3
+	elif score > 18:
+		Monster.turnRate = 0.2
+		Monster.spin = 130
+	elif score > 26:
+		Monster.turnRate = 0.1
+		Monster.spin = 130
+		cir.spin = 140
+	elif score > 34:
+		Monster.turnRate = 0.05
+		Monster.spin = 150
+		cir.spin = 160
 	buttons.hide()
 	Signals.connect("deaded", Callable(self, "_deaded"))
 	title.hide()

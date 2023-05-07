@@ -1,5 +1,5 @@
 extends Control
-
+@onready var music2 := $AudioStreamPlayer3
 
 
 var levels = [
@@ -8,6 +8,7 @@ var levels = [
 ]
 
 func _ready():
+	music2.play()
 	randomize()
 
 
