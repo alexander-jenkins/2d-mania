@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://bygcaes1c2un3"]
+
+[ext_resource type="Texture2D" uid="uid://cwp85y5as1uva" path="res://assets/images/player/PolyBG.png" id="1_gt6s7"]
+[ext_resource type="PackedScene" uid="uid://dw1q1ijlm57wc" path="res://scenes/objects/players/Polygon.tscn" id="2_74s56"]
+
+[node name="TranslateLevel" type="Node2D"]
+
+[node name="background_layer" type="CanvasLayer" parent="."]
+layer = -3
+
+[node name="image" type="TextureRect" parent="background_layer"]
+modulate = Color(0.839216, 0.839216, 0.839216, 1)
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_gt6s7")
+
+[node name="Polygon" parent="." instance=ExtResource("2_74s56")]
+position = Vector2(640, 360)
+
+[node name="spawn" type="Node2D" parent="."]
+position = Vector2(639, 359)
+
+[node name="right" type="Node2D" parent="spawn"]
+position = Vector2(640, 2.08165e-12)
+
+[node name="left" type="Node2D" parent="spawn"]
+position = Vector2(-640, 2.08165e-12)
+
+[node name="up" type="Node2D" parent="spawn"]
+position = Vector2(2.08165e-12, -360)
+
+[node name="down" type="Node2D" parent="spawn"]
+position = Vector2(-2, 362)
+
+[node name="top_left" type="Node2D" parent="spawn"]
+position = Vector2(-640, -360)
+
+[node name="top_right" type="Node2D" parent="spawn"]
+position = Vector2(640, -360)
+
+[node name="bottom_left" type="Node2D" parent="spawn"]
+position = Vector2(-640, 360)
+
+[node name="bottom_right" type="Node2D" parent="spawn"]
