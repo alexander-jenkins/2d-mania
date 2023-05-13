@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bffx67yw8vbnq"]
+[gd_scene load_steps=18 format=3 uid="uid://bffx67yw8vbnq"]
 
 [ext_resource type="Script" path="res://scripts/ui/MainPage.gd" id="1_6donm"]
 [ext_resource type="Texture2D" uid="uid://1423q6jc38xf" path="res://assets/images/player/BackGround.png" id="2_kcryc"]
@@ -10,8 +10,47 @@
 [ext_resource type="Texture2D" uid="uid://f0cwvukp4qg6" path="res://assets/images/player/howtoplayHOVER.png" id="6_lfv13"]
 [ext_resource type="PackedScene" uid="uid://qsl2fl88rinx" path="res://scenes/ui/bg_particles.tscn" id="7_atpji"]
 [ext_resource type="Texture2D" uid="uid://dh7e0opsevas3" path="res://assets/images/player/creditHOVER.png" id="8_gjywu"]
+[ext_resource type="Texture2D" uid="uid://nlgcqtt703rf" path="res://assets/images/player/Howtoplaylayout.png" id="10_jjvnu"]
 [ext_resource type="AudioStream" uid="uid://b8252c02k15eg" path="res://assets/sounds/confirm.WAV" id="11_7mly6"]
+[ext_resource type="Texture2D" uid="uid://b3gouu70bgpj7" path="res://assets/images/player/back.png" id="11_rqhhu"]
 [ext_resource type="AudioStream" uid="uid://djnlvj63p0xvl" path="res://assets/music/2D-Mania_8.mp3" id="12_jtdmp"]
+[ext_resource type="Texture2D" uid="uid://cx7ollcxrwodg" path="res://assets/images/player/backHOVER.png" id="12_wddau"]
+[ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="14_s7gvw"]
+
+[sub_resource type="FontFile" id="FontFile_06bso"]
+fallbacks = Array[Font]([ExtResource("14_s7gvw")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/16/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/16/0/glyphs/0/size = Vector2(0, 0)
+cache/0/16/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/16/0/glyphs/0/texture_idx = -1
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
 
 [node name="MainPage" type="Control"]
 layout_mode = 3
@@ -71,11 +110,67 @@ offset_bottom = 605.0
 texture = ExtResource("3_guyog")
 expand_mode = 1
 
+[node name="CanvasLayer4" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer4"]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("10_jjvnu")
+
+[node name="back" type="TextureButton" parent="CanvasLayer4"]
+offset_left = -98.0
+offset_top = 552.0
+offset_right = 274.0
+offset_bottom = 784.0
+texture_normal = ExtResource("11_rqhhu")
+texture_hover = ExtResource("12_wddau")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
 [node name="BG_particles" parent="CanvasLayer" instance=ExtResource("7_atpji")]
 position = Vector2(-4, -127)
+
+[node name="CanvasLayer5" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="CanvasLayer5"]
+offset_left = 227.0
+offset_top = 119.0
+offset_right = 1056.0
+offset_bottom = 265.0
+theme_override_fonts/font = SubResource("FontFile_06bso")
+theme_override_font_sizes/font_size = 80
+text = "Gameplay designer
+Alex Jenkins
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer5"]
+offset_left = 227.0
+offset_top = 307.0
+offset_right = 1056.0
+offset_bottom = 453.0
+theme_override_colors/font_color = Color(0, 0, 0.780392, 1)
+theme_override_fonts/font = SubResource("FontFile_06bso")
+theme_override_font_sizes/font_size = 80
+text = "Art and Sound 
+Nyasha Marufu
+"
+horizontal_alignment = 1
+
+[node name="back2" type="TextureButton" parent="CanvasLayer5"]
+offset_left = -98.0
+offset_top = 552.0
+offset_right = 274.0
+offset_bottom = 784.0
+texture_normal = ExtResource("11_rqhhu")
+texture_hover = ExtResource("12_wddau")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="confirm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_7mly6")
@@ -84,3 +179,7 @@ stream = ExtResource("11_7mly6")
 stream = ExtResource("12_jtdmp")
 
 [connection signal="pressed" from="CanvasLayer2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="CanvasLayer4/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="CanvasLayer5/back2" to="." method="_on_back_2_pressed"]

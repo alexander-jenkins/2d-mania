@@ -1,42 +1,47 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://2t2i4yl5mwjd"]
 
-[ext_resource path="res://assets/images/enemies/smallEnemy.png" type="Texture2D" id=1]
+[ext_resource type="Texture2D" uid="uid://begl8q4ahf178" path="res://assets/images/enemies/smallEnemy.png" id="1"]
 
-[sub_resource type="AtlasTexture" id=8]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 300, 300 )
+[sub_resource type="AtlasTexture" id="8"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 300, 300)
 
-[sub_resource type="AtlasTexture" id=11]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 900, 0, 300, 300 )
+[sub_resource type="AtlasTexture" id="11"]
+atlas = ExtResource("1")
+region = Rect2(900, 0, 300, 300)
 
-[sub_resource type="AtlasTexture" id=12]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 1200, 0, 300, 300 )
+[sub_resource type="AtlasTexture" id="12"]
+atlas = ExtResource("1")
+region = Rect2(1200, 0, 300, 300)
 
-[sub_resource type="SpriteFrames" id=6]
-animations = [ {
-"frames": [ SubResource( 8 ), SubResource( 11 ), SubResource( 12 ) ],
+[sub_resource type="SpriteFrames" id="6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("8")
+}, {
+"duration": 1.0,
+"texture": SubResource("11")
+}, {
+"duration": 1.0,
+"texture": SubResource("12")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 12.0
-} ]
+}]
 
-[sub_resource type="CircleShape2D" id=7]
+[sub_resource type="CircleShape2D" id="7"]
 radius = 100.005
 
 [node name="Small" type="Area2D"]
-position = Vector2( 502, 306 )
+position = Vector2(502, 306)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-frames = SubResource( 6 )
-frame = 1
-playing = true
+sprite_frames = SubResource("6")
+frame_progress = 0.962271
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 7 )
+shape = SubResource("7")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
