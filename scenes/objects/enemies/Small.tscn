@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://2t2i4yl5mwjd"]
+[gd_scene load_steps=8 format=3 uid="uid://bi46g1tmoroni"]
 
 [ext_resource type="Texture2D" uid="uid://begl8q4ahf178" path="res://assets/images/enemies/smallEnemy.png" id="1"]
+[ext_resource type="Script" path="res://scenes/objects/enemies/Small.gd" id="1_gd5a3"]
 
 [sub_resource type="AtlasTexture" id="8"]
 atlas = ExtResource("1")
@@ -35,11 +36,14 @@ animations = [{
 radius = 100.005
 
 [node name="Small" type="Area2D"]
-position = Vector2(502, 306)
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_gd5a3")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 3.14159
 sprite_frames = SubResource("6")
-frame_progress = 0.962271
+frame = 1
+frame_progress = 0.974955
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("7")

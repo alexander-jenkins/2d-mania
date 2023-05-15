@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://6crhrot1g3q"]
 
-[ext_resource type="PackedScene" uid="uid://by3ek0v48v0pe" path="res://scenes/objects/players/Tirangle.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bu0b8bdd8x1tt" path="res://scenes/objects/players/Tirangle.tscn" id="1"]
 [ext_resource type="Script" path="res://scripts/ui/ScaleLevel.gd" id="2"]
-[ext_resource type="PackedScene" uid="uid://cht8r2lt7fu23" path="res://scenes/ui/animetedBG.tscn" id="2_aqctw"]
+[ext_resource type="PackedScene" path="res://scenes/ui/animetedBG.tscn" id="2_aqctw"]
 [ext_resource type="Texture2D" uid="uid://bhs8fmrjd3phk" path="res://assets/images/player/triangleBG.png" id="2_pif8p"]
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://b13arossmgg0l" path="res://scenes/ui/buttons.tscn" id="5_vxmw4"]
+[ext_resource type="PackedScene" path="res://scenes/ui/buttons.tscn" id="5_vxmw4"]
 
 [node name="ScaleLevel" type="Node2D"]
 script = ExtResource("2")

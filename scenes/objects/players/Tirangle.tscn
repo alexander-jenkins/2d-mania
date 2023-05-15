@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://by3ek0v48v0pe"]
+[gd_scene load_steps=3 format=3 uid="uid://bu0b8bdd8x1tt"]
 
 [ext_resource type="Texture2D" uid="uid://cfc4my3u4nvqq" path="res://assets/images/player/scalingLevelCharacter.png" id="1"]
 [ext_resource type="Script" path="res://scripts/player/Tirangle.gd" id="2"]
