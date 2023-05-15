@@ -16,6 +16,7 @@ extends Node2D
 		$spawn_origin/bottom_left, 
 		$spawn_origin/bottom_right
 	]
+@onready var alive = true
 
 # Settings
 @export var totalTime = 10
@@ -26,12 +27,16 @@ func _ready():
 	pass
 
 func _process(_delta):
-	if timer.is_stopped() and totalTime >= 0:
+	if not alive:
+		win_state.show()
+	if timer.is_stopped() and totalTime >= 0 and $Polygon != null:
 		clock.text = str(totalTime)
 		totalTime -= 1
 		timer.start(1)
 		if totalTime % 3 == 0:
 			spawnNextEnemy()
+	elif totalTime == 0:
+		print("You win!")
 	pass
 
 func spawnNextEnemy():
@@ -42,7 +47,7 @@ func spawnNextEnemy():
 	next.global_position = point.global_position
 	var playerLoc = $Polygon.global_position
 	next.look_at(playerLoc)
-	var dir = point.global_position.angle_to_point(Vector2(playerLoc))
+	var dir = point.global_position.direction_to(Vector2(playerLoc))
 	next.direction = dir
 	scene.add_sibling(next)
 	pass
