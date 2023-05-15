@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://w14t8ecnalg6" path="res://scenes/objects/enemies/Large.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://480l3ixo4hrl" path="res://assets/images/player/CircleBG.png" id="2_rjptd"]
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/ui/animetedBG.tscn" id="3_v881j"]
+[ext_resource type="PackedScene" uid="uid://cht8r2lt7fu23" path="res://scenes/ui/animetedBG.tscn" id="3_v881j"]
 [ext_resource type="Script" path="res://scripts/ui/RotateLevel.gd" id="4"]
-[ext_resource type="PackedScene" path="res://scenes/ui/buttons.tscn" id="6_6aoir"]
+[ext_resource type="PackedScene" uid="uid://b13arossmgg0l" path="res://scenes/ui/buttons.tscn" id="6_6aoir"]
 
 [node name="RotateLevel" type="Node2D"]
 position = Vector2(640, 360)

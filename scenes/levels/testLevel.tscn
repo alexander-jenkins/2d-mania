@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgk4ijp4u3l20"]
+[gd_scene load_steps=2 format=3 uid="uid://b6yn4vhco87at"]
 
 [ext_resource type="PackedScene" uid="uid://w14t8ecnalg6" path="res://scenes/objects/enemies/Large.tscn" id="1"]
 

@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://68cuv2tkpxnf"]
+
+[ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="1_gweqd"]
+[ext_resource type="Texture2D" uid="uid://c4oyq6fj7ex5m" path="res://assets/images/player/RectBG.png" id="2_yvvso"]
+[ext_resource type="PackedScene" uid="uid://dd3jvhx2fakx1" path="res://scenes/objects/players/Rectangle.tscn" id="3_xxxhs"]
+
+[node name="reflection_level" type="Node2D"]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Control" parent="." instance=ExtResource("1_gweqd")]
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+z_index = -1
+layout_mode = 0
+offset_left = -15.0
+offset_top = -19.0
+offset_right = 1265.0
+offset_bottom = 701.0
+texture = ExtResource("2_yvvso")
+
+[node name="Rectangle" parent="." instance=ExtResource("3_xxxhs")]
+position = Vector2(378, 482)
+scale = Vector2(0.316, 0.288)
+
+[node name="game_origin" type="Node2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="top_left" type="Node2D" parent="game_origin"]
+
+[node name="top_right" type="Node2D" parent="game_origin"]
+
+[node name="bottom_right" type="Node2D" parent="game_origin"]
+position = Vector2(262, 122)
+
+[node name="bottom_left" type="Node2D" parent="game_origin"]
+position = Vector2(-262, 122)

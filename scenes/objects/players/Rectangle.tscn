@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd3jvhx2fakx1"]
+
+[ext_resource type="Script" path="res://scripts/player/Polygon.gd" id="1_tj6ku"]
+[ext_resource type="Texture2D" uid="uid://ds2wyiowj5nis" path="res://assets/images/player/reflectionLevelCharacter.png" id="2_52ier"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6um4y"]
+size = Vector2(250, 253)
+
+[node name="Rectangle" type="Area2D"]
+script = ExtResource("1_tj6ku")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_52ier")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6um4y")
