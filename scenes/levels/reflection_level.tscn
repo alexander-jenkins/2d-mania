@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://68cuv2tkpxnf"]
+[gd_scene load_steps=5 format=3 uid="uid://68cuv2tkpxnf"]
 
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="1_gweqd"]
+[ext_resource type="Script" path="res://scripts/ui/reflection_level.gd" id="1_xr63w"]
 [ext_resource type="Texture2D" uid="uid://c4oyq6fj7ex5m" path="res://assets/images/player/RectBG.png" id="2_yvvso"]
 [ext_resource type="PackedScene" uid="uid://dd3jvhx2fakx1" path="res://scenes/objects/players/Rectangle.tscn" id="3_xxxhs"]
 
 [node name="reflection_level" type="Node2D"]
+script = ExtResource("1_xr63w")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
@@ -28,8 +30,10 @@ scale = Vector2(0.316, 0.288)
 position = Vector2(640, 360)
 
 [node name="top_left" type="Node2D" parent="game_origin"]
+position = Vector2(-262, -122)
 
 [node name="top_right" type="Node2D" parent="game_origin"]
+position = Vector2(262, -122)
 
 [node name="bottom_right" type="Node2D" parent="game_origin"]
 position = Vector2(262, 122)

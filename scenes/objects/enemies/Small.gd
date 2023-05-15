@@ -18,4 +18,4 @@ func _on_area_entered(area):
 	if area is Player:
 		scene.remove_child(area)
 		print("enter player")
-	pass # Replace with function body.
+	pass

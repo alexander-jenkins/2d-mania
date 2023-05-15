@@ -27,9 +27,10 @@ func _ready():
 	pass
 
 func _process(_delta):
+	var player = get_node_or_null("Polygon")	
 	if not alive:
 		win_state.show()
-	if timer.is_stopped() and totalTime >= 0 and $Polygon != null:
+	if timer.is_stopped() and totalTime >= 0 and player != null:
 		clock.text = str(totalTime)
 		totalTime -= 1
 		timer.start(1)

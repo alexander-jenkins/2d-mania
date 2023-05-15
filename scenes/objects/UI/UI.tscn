@@ -3,6 +3,9 @@
 [ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="1"]
 
 [sub_resource type="FontFile" id="1"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 fallbacks = Array[Font]([ExtResource("1")])
 face_index = null
 embolden = null

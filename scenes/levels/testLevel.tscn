@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6yn4vhco87at"]
-
-[ext_resource type="PackedScene" uid="uid://w14t8ecnalg6" path="res://scenes/objects/enemies/Large.tscn" id="1"]
-
-[node name="testLevel" type="Node2D"]
-
-[node name="Large" parent="." instance=ExtResource("1")]
-position = Vector2(640, 360)
