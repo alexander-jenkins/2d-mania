@@ -43,7 +43,6 @@ func _process(_delta):
 func spawnNextEnemy():
 	spawns.shuffle()
 	var point = spawns.pop_front()
-	print("Spawning at ", point)
 	var next := enemy.instantiate()
 	next.global_position = point.global_position
 	var playerLoc = $Polygon.global_position

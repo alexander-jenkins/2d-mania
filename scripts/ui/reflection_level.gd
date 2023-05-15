@@ -6,6 +6,17 @@ extends Node2D
 @onready var clock = $Control/Label
 @onready var alive = true
 @onready var total_time = 10
+@onready var spawns = [ 
+		$spawn_origin/up, 
+		$spawn_origin/down,
+		$spawn_origin/left,
+		$spawn_origin/right, 
+		$spawn_origin/top_left, 
+		$spawn_origin/top_right, 
+		$spawn_origin/bottom_left, 
+		$spawn_origin/bottom_right
+	]
+@onready var enemy := preload("res://scenes/objects/enemies/Small.tscn")
 
 func _ready():
 	clock.text = str(total_time)
@@ -25,8 +36,21 @@ func _process(_delta):
 		total_time -= 1
 		timer.start(1)
 		if total_time % 3 == 0:
-			#spawnNextEnemy()
+			spawnNextEnemy()
 			pass
 	elif total_time == 0:
 		print("You win!")
+	pass
+
+func spawnNextEnemy():
+	spawns.shuffle()
+	var point = spawns.pop_front()
+	print("Spawning at ", point)
+	var next := enemy.instantiate()
+	next.global_position = point.global_position
+	var playerLoc = $Rectangle.global_position
+	next.look_at(playerLoc)
+	var dir = point.global_position.direction_to(Vector2(playerLoc))
+	next.direction = dir
+	scene.add_sibling(next)
 	pass
