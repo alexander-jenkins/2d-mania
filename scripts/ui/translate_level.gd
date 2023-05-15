@@ -28,6 +28,8 @@ func _ready():
 
 func _process(_delta):
 	var player = get_node_or_null("Polygon")	
+	if player == null:
+		alive = false
 	if not alive:
 		win_state.show()
 	if timer.is_stopped() and totalTime >= 0 and player != null:
