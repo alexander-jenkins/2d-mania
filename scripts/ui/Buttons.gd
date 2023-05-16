@@ -3,6 +3,8 @@ extends Control
 var levels = [
 	"res://scenes/levels/RotateLevel.tscn",
 	"res://scenes/levels/ScaleLevel.tscn",
+	"res://scenes/levels/reflection_level.tscn",
+	"res://scenes/levels/translate_level.tscn"
 ]
 
 func _ready():
@@ -13,7 +15,7 @@ func _ready():
 func _on_retry_pressed():
 	Score._deaded()
 	Signals.emit_signal("startGame")
-	var x = randi_range(0,1)
+	var x = randi_range(0,3)
 	SceneTransition.change_scene_to_file(levels[x], "dissolve")
 
 

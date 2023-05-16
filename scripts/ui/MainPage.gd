@@ -9,6 +9,8 @@ var is_stated: bool = false
 var levels = [
 	"res://scenes/levels/RotateLevel.tscn",
 	"res://scenes/levels/ScaleLevel.tscn",
+	"res://scenes/levels/reflection_level.tscn",
+	"res://scenes/levels/translate_level.tscn",
 ]
 
 func _ready():
@@ -26,7 +28,7 @@ func _on_button_pressed():
 	is_stated = true
 	await $confirm.finished
 	Signals.emit_signal("startGame")
-	var x = randi_range(0,1)
+	var x = randi_range(0,3)
 	SceneTransition.change_scene_to_file(levels[x], "dissolve")
 
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://68cuv2tkpxnf"]
+[gd_scene load_steps=6 format=3 uid="uid://68cuv2tkpxnf"]
 
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="1_gweqd"]
 [ext_resource type="Script" path="res://scripts/ui/reflection_level.gd" id="1_xr63w"]
 [ext_resource type="Texture2D" uid="uid://c4oyq6fj7ex5m" path="res://assets/images/player/RectBG.png" id="2_yvvso"]
 [ext_resource type="PackedScene" uid="uid://dd3jvhx2fakx1" path="res://scenes/objects/players/Rectangle.tscn" id="3_xxxhs"]
+[ext_resource type="PackedScene" uid="uid://b13arossmgg0l" path="res://scenes/ui/buttons.tscn" id="5_o5x16"]
 
 [node name="reflection_level" type="Node2D"]
 script = ExtResource("1_xr63w")
@@ -44,24 +45,27 @@ position = Vector2(-262, 122)
 [node name="spawn_origin" type="Node2D" parent="."]
 
 [node name="top_right" type="Node2D" parent="spawn_origin"]
-position = Vector2(1280, 2.08165e-12)
+position = Vector2(1550, -219)
 
 [node name="right" type="Node2D" parent="spawn_origin"]
-position = Vector2(1280, 360)
+position = Vector2(1589, 373)
 
 [node name="bottom_right" type="Node2D" parent="spawn_origin"]
-position = Vector2(1280, 720)
+position = Vector2(1567, 923)
 
 [node name="down" type="Node2D" parent="spawn_origin"]
-position = Vector2(640, 720)
+position = Vector2(640, 980)
 
 [node name="bottom_left" type="Node2D" parent="spawn_origin"]
-position = Vector2(2.08165e-12, 720)
+position = Vector2(-191, 982)
 
 [node name="left" type="Node2D" parent="spawn_origin"]
-position = Vector2(0, 360)
+position = Vector2(-221, 360)
 
 [node name="top_left" type="Node2D" parent="spawn_origin"]
+position = Vector2(-227, -137)
 
 [node name="up" type="Node2D" parent="spawn_origin"]
-position = Vector2(640, 2.08165e-12)
+position = Vector2(640, -238)
+
+[node name="Buttons" parent="." instance=ExtResource("5_o5x16")]

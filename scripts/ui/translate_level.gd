@@ -5,6 +5,7 @@ extends Node2D
 @onready var timer = $Timer
 @onready var win_state = $Control/Label2
 @onready var clock = $Control/Label
+@onready var Buttons := $Buttons
 @onready var enemy := preload("res://scenes/objects/enemies/Small.tscn")
 @onready var spawns = [ 
 		$spawn_origin/up, 
@@ -16,6 +17,11 @@ extends Node2D
 		$spawn_origin/bottom_left, 
 		$spawn_origin/bottom_right
 	]
+var level = [
+	"res://scenes/levels/ScaleLevel.tscn",
+	"res://scenes/levels/RotateLevel.tscn",
+	"res://scenes/levels/reflection_level.tscn"
+]
 @onready var alive = true
 
 # Settings
@@ -24,14 +30,17 @@ extends Node2D
 func _ready():	
 	clock.text = str(totalTime)
 	win_state.hide()
+	Buttons.hide()
 	pass
 
 func _process(_delta):
-	var player = get_node_or_null("Polygon")	
+	var player = get_node_or_null("Polygon")
 	if player == null:
 		alive = false
 	if not alive:
+		Score.stopMusic()
 		win_state.show()
+		Buttons.show()
 	if timer.is_stopped() and totalTime >= 0 and player != null:
 		clock.text = str(totalTime)
 		totalTime -= 1
@@ -39,7 +48,16 @@ func _process(_delta):
 		if totalTime % 3 == 0:
 			spawnNextEnemy()
 	elif totalTime == 0:
-		print("You win!")
+		var z = randi_range(0,2)
+		get_tree().call_group("Emeny", "queue_free")
+		Score._scoreIncrease(1)
+		match z:
+			0:
+				SceneTransition.change_scene_to_file(level[0], "triangle")
+			1:
+				SceneTransition.change_scene_to_file(level[1], "circle")
+			2:
+				SceneTransition.change_scene_to_file(level[2], "rect")
 	pass
 
 func spawnNextEnemy():

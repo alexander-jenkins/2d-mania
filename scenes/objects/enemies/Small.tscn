@@ -35,7 +35,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="7"]
 radius = 100.005
 
-[node name="Small" type="Area2D"]
+[node name="Small" type="Area2D" groups=["Emeny"]]
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_gd5a3")
 
@@ -51,3 +51,4 @@ shape = SubResource("7")
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

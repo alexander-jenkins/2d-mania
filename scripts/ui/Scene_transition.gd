@@ -9,6 +9,10 @@ func change_scene_to_file(target: String, type: String) -> void:
 			Cricle_scene(target)
 		'triangle':
 			Triangle_scene(target)
+		'poly':
+			Poly_scene(target)
+		'rect':
+			Rect_scene(target)
 	
 
 
@@ -36,3 +40,18 @@ func Triangle_scene(target: String):
 	
 	$AnimationPlayer.play("TrinagleOut")
 	
+func Poly_scene(target: String):
+	$AnimationPlayer.play("Poly")
+# warning-ignore:return_value_discarded
+	get_tree().change_scene_to_file(target)
+	await $AnimationPlayer.animation_finished
+	
+	$AnimationPlayer.play("PolyOut")
+	
+func Rect_scene(target: String):
+	$AnimationPlayer.play("Rectangle")
+# warning-ignore:return_value_discarded
+	get_tree().change_scene_to_file(target)
+	await $AnimationPlayer.animation_finished
+	
+	$AnimationPlayer.play("RectangleOut")

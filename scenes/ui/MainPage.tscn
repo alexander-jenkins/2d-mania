@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://buyanyo54cajt" path="res://assets/images/player/playHOVER.png" id="4_ng1i4"]
 [ext_resource type="Texture2D" uid="uid://3tmr1jq8yfdc" path="res://assets/images/player/credit.png" id="5_18pbx"]
 [ext_resource type="Texture2D" uid="uid://f0cwvukp4qg6" path="res://assets/images/player/howtoplayHOVER.png" id="6_lfv13"]
-[ext_resource type="PackedScene" path="res://scenes/ui/bg_particles.tscn" id="7_atpji"]
+[ext_resource type="PackedScene" uid="uid://qsl2fl88rinx" path="res://scenes/ui/bg_particles.tscn" id="7_atpji"]
 [ext_resource type="Texture2D" uid="uid://dh7e0opsevas3" path="res://assets/images/player/creditHOVER.png" id="8_gjywu"]
 [ext_resource type="Texture2D" uid="uid://nlgcqtt703rf" path="res://assets/images/player/Howtoplaylayout.png" id="10_jjvnu"]
 [ext_resource type="AudioStream" uid="uid://b8252c02k15eg" path="res://assets/sounds/confirm.WAV" id="11_7mly6"]

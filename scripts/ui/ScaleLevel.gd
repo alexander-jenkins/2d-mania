@@ -16,6 +16,13 @@ var pmonster := preload("res://scenes/objects/enemies/Long.tscn")
 @onready var down := $monsterSpawn/down
 @onready var Ratetime := $rate
 @export var fireRate := 3.5
+
+var level = [
+	"res://scenes/levels/translate_level.tscn",
+	"res://scenes/levels/RotateLevel.tscn",
+	"res://scenes/levels/reflection_level.tscn"
+]
+
 var speedx = 800
 var speedy = 700
 var side = -1
@@ -121,6 +128,7 @@ func _process(_delta):
 		nextLevel()
 
 func nextLevel():
+	var z = randi_range(0,2)
 	Monster = true
 	get_tree().call_group("Emeny", "queue_free")
 	clock.hide()
@@ -128,7 +136,13 @@ func nextLevel():
 	title.text = str("YOU WIN")
 	Score._scoreIncrease(1)
 # warning-ignore:return_value_discarded
-	SceneTransition.change_scene_to_file("res://scenes/levels/RotateLevel.tscn", "circle")
+	match z:
+		0:
+			SceneTransition.change_scene_to_file("res://scenes/levels/translate_level.tscn", "poly")
+		1:
+			SceneTransition.change_scene_to_file("res://scenes/levels/RotateLevel.tscn", "circle")
+		2:
+			SceneTransition.change_scene_to_file("res://scenes/levels/reflection_level.tscn", "rect")
 
 func _deaded():
 	death = true

@@ -20,8 +20,9 @@ func _startGame():
 func stopMusic():
 	if score > HighScore:
 		HighScore = score
-	music1.stop()
 	Gameover.play()
+	music1.stop()
+
 
 func _endGame():
 	scoreLabel.hide()

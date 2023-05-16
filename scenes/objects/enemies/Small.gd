@@ -4,6 +4,7 @@ extends Area2D
 @export var speed = 5
 @export var direction: Vector2 = Vector2(1, 0)
 @onready var scene = get_tree().current_scene
+var object: Player = null
 
 func _ready():
 	animation.play()
@@ -11,11 +12,15 @@ func _ready():
 
 func _process(_delta):
 	translate(direction * speed)
-	pass
+	if object != null:
+		object.death()
 
 
 func _on_area_entered(area):
 	if area is Player:
-		scene.remove_child(area)
-		print("enter player")
-	pass
+		object = area
+
+
+func _on_area_exited(area):
+	if area is Player:
+		object = null
