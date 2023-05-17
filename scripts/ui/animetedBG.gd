@@ -8,6 +8,9 @@ func _process(_delta):
 			$AnimationPlayer.play("MoveUp")
 		1:
 			$AnimationPlayer.play("SpinAround")
+		2:
+			$AnimationPlayer.play("PolyMove")
+
 	
 	
 	
