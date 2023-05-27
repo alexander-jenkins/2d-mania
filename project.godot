@@ -13,6 +13,9 @@ config_version=5
 config/name="SlideFilpRise"
 run/main_scene="res://scenes/ui/MainPage.tscn"
 config/features=PackedStringArray("4.0")
+boot_splash/bg_color=Color(0.458824, 0.580392, 0.94902, 1)
+boot_splash/image="res://assets/images/player/reflectionLevelCharacter.png"
+boot_splash/fullsize=false
 config/icon="res://assets/images/player/reflectionLevelCharacter.png"
 
 [autoload]
@@ -20,6 +23,7 @@ config/icon="res://assets/images/player/reflectionLevelCharacter.png"
 Signals="*res://scripts/ui/signals.gd"
 SceneTransition="*res://scenes/objects/UI/Scene_transition.tscn"
 Score="*res://scenes/objects/UI/score.tscn"
+MouseCursor="*res://scripts/ui/MouseCursor.gd"
 
 [display]
 
@@ -67,6 +71,11 @@ Move_right={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"echo":false,"script":null)
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"echo":false,"script":null)
+]
+}
+Confirm={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
 ]
 }
 

@@ -22,6 +22,8 @@ func _ready():
 		turn = 1
 	else:
 		turn = -1
+	if Score.Is_Mute() == true:
+		$sound.volume_db = -80
 
 func _process(delta):
 	if rate.is_stopped():

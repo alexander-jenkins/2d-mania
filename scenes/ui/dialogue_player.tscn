@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbfsnb5qq4sgr"]
+
+[ext_resource type="Script" path="res://scripts/ui/dialogue_player.gd" id="1_3gag8"]
+[ext_resource type="Texture2D" uid="uid://uffm32iqx3lb" path="res://assets/images/player/Dialog.png" id="1_nlrgd"]
+[ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="2_1ssvr"]
+
+[sub_resource type="FontFile" id="FontFile_0t3gn"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("2_1ssvr")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/16/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/16/0/glyphs/0/size = Vector2(0, 0)
+cache/0/16/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/16/0/glyphs/0/texture_idx = -1
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/80/0/ascent = 0.0
+cache/0/80/0/descent = 0.0
+cache/0/80/0/underline_position = 0.0
+cache/0/80/0/underline_thickness = 0.0
+cache/0/80/0/scale = 1.0
+cache/0/80/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/80/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/80/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+
+[node name="DialoguePlayer" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_3gag8")
+dialogue_file = "res://assets/fonts/Oval1.json"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+offset_left = 106.0
+offset_top = 26.0
+offset_right = 1210.0
+offset_bottom = 296.0
+texture = ExtResource("1_nlrgd")
+patch_margin_left = 98
+patch_margin_top = 79
+patch_margin_right = 87
+patch_margin_bottom = 97
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 40.0
+offset_right = 366.0
+offset_bottom = 100.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontFile_0t3gn")
+theme_override_font_sizes/normal_font_size = 50
+text = "Name"
+
+[node name="Message" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 112.0
+offset_right = 1049.0
+offset_bottom = 238.0
+pivot_offset = Vector2(416, -20)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontFile_0t3gn")
+theme_override_font_sizes/normal_font_size = 40
+text = "Message
+"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

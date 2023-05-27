@@ -6,7 +6,7 @@ extends Node2D
 @onready var clock = $Control/Label
 @onready var Buttons := $Buttons
 @onready var alive = true
-@onready var total_time = 10
+@onready var total_time = 11
 @onready var spawns = [ 
 		$spawn_origin/up, 
 		$spawn_origin/down,
@@ -33,22 +33,22 @@ func _ready():
 	print("Top left: ", $game_origin/top_left.global_position)
 	print("Top right: ", $game_origin/top_right.global_position)
 	print("Bottom right: ", $game_origin/bottom_right.global_position)
-	pass
+	Signals.connect("deaded", Callable(self, "_deaded"))
 
 func _process(_delta):
 	var player = get_node_or_null("Rectangle")
 	if player == null:
 		alive = false
 	if not alive:
-		gameover()
+		pass
 	if timer.is_stopped() and total_time >= 0 and player != null:
-		clock.text = str(total_time)
 		total_time -= 1
+		clock.text = str(total_time)
 		timer.start(1)
 		if total_time % 3 == 0:
 			spawnNextEnemy()
 			pass
-	elif total_time == 0:
+	elif total_time <= 0:
 		var z = randi_range(0,2)
 		get_tree().call_group("Emeny", "queue_free")
 		Score._scoreIncrease(1)
@@ -61,12 +61,16 @@ func _process(_delta):
 				SceneTransition.change_scene_to_file(level[2], "poly")
 	pass
 	
+func _deaded():
+	Score.stopMusic()
+	win_state.show()
+	Buttons.show()
 
 func gameover():
 	Score.stopMusic()
 	win_state.show()
 	Buttons.show()
-	
+
 
 func spawnNextEnemy():
 	spawns.shuffle()

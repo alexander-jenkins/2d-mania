@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=3 uid="uid://fclkw4jpgrf3"]
+
+[ext_resource type="PackedScene" uid="uid://cv0xcmnedbjqv" path="res://scenes/objects/players/Oval.tscn" id="1_0ft63"]
+[ext_resource type="Texture2D" uid="uid://brwebij6qxl1r" path="res://assets/images/player/GrayBG.png" id="1_0hb0t"]
+[ext_resource type="PackedScene" uid="uid://cbfsnb5qq4sgr" path="res://scenes/ui/dialogue_player.tscn" id="2_40aoo"]
+[ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="4_80h0t"]
+[ext_resource type="PackedScene" uid="uid://dgr7vyo4atxrg" path="res://scenes/ui/OvalBackground.tscn" id="5_cag5p"]
+
+[sub_resource type="FontFile" id="FontFile_vr12w"]
+fallbacks = Array[Font]([ExtResource("4_80h0t")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/70/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/60/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/60/0 = Vector2(0, 0)
+
+[node name="Tutorial_Tip" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("1_0hb0t")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Oval" parent="CanvasLayer2" instance=ExtResource("1_0ft63")]
+position = Vector2(148, 572)
+path = "res://scenes/ui/MainPage.tscn"
+
+[node name="DialoguePlayer" parent="CanvasLayer2/Oval" instance=ExtResource("2_40aoo")]
+dialogue_file = "res://assets/fonts/Oval2.json"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 378.0
+offset_top = 96.0
+offset_right = 929.0
+offset_bottom = 216.0
+theme_override_fonts/font = SubResource("FontFile_vr12w")
+theme_override_font_sizes/font_size = 60
+text = "Final 
+Tips"
+horizontal_alignment = 1
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("5_cag5p")]
+layer = 1

@@ -1,7 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://dw1q1ijlm57wc"]
+[gd_scene load_steps=8 format=3 uid="uid://dw1q1ijlm57wc"]
 
-[ext_resource type="Texture2D" uid="uid://daknt01lel17k" path="res://assets/images/player/translationLevelCharacter.png" id="1_53p4m"]
 [ext_resource type="Script" path="res://scripts/player/Polygon.gd" id="1_lcbsr"]
+[ext_resource type="Texture2D" uid="uid://cv4htmbaf2yi7" path="res://assets/images/player/translationLevelSheet.png" id="2_h158c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74y1j"]
+atlas = ExtResource("2_h158c")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivnqg"]
+atlas = ExtResource("2_h158c")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1milb"]
+atlas = ExtResource("2_h158c")
+region = Rect2(900, 0, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_17p1r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74y1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivnqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74y1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivnqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74y1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivnqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1milb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivnqg")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vs2cw"]
 radius = 143.031
@@ -10,8 +54,11 @@ radius = 143.031
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_lcbsr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_53p4m")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_17p1r")
+animation = &"normal"
+frame = 3
+frame_progress = 0.969246
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vs2cw")

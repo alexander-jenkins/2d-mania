@@ -6,7 +6,7 @@ var velocity = Vector2.ZERO
 
 
 func _ready():
-	pass
+	$Sprite2D.play("normal")
 	
 func _physics_process(_delta):
 	var direction = Input.get_vector("Move_left", "Move_right", "Move_up", "Move_down")

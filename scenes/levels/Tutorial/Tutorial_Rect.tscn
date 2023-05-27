@@ -1,0 +1,110 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4fx7xu6xap4s"]
+
+[ext_resource type="PackedScene" uid="uid://dd3jvhx2fakx1" path="res://scenes/objects/players/Rectangle.tscn" id="1_ajnw3"]
+[ext_resource type="PackedScene" uid="uid://bl4o3bud7kdem" path="res://scenes/ui/reflection_bg.tscn" id="1_x6c6y"]
+[ext_resource type="PackedScene" uid="uid://cv0xcmnedbjqv" path="res://scenes/objects/players/Oval.tscn" id="3_gimpe"]
+[ext_resource type="PackedScene" uid="uid://cbfsnb5qq4sgr" path="res://scenes/ui/dialogue_player.tscn" id="4_2jel1"]
+[ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="5_jjbdo"]
+
+[sub_resource type="FontFile" id="FontFile_6uhtw"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("5_jjbdo")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/70/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/60/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/60/0 = Vector2(0, 0)
+
+[node name="Tutorial_Rect" type="Node2D"]
+
+[node name="ReflectionBG" parent="." instance=ExtResource("1_x6c6y")]
+
+[node name="Rectangle" parent="." instance=ExtResource("1_ajnw3")]
+position = Vector2(378, 482)
+scale = Vector2(0.5, 0.456)
+
+[node name="Oval" parent="." instance=ExtResource("3_gimpe")]
+position = Vector2(118, 582)
+path = "res://scenes/levels/Tutorial/Tutorial_Rota.tscn"
+
+[node name="DialoguePlayer" parent="Oval" instance=ExtResource("4_2jel1")]
+dialogue_file = "res://assets/fonts/OvalRe.json"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 378.0
+offset_top = 81.0
+offset_right = 929.0
+offset_bottom = 201.0
+theme_override_fonts/font = SubResource("FontFile_6uhtw")
+theme_override_font_sizes/font_size = 60
+text = "Reflection
+Level"
+horizontal_alignment = 1

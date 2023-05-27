@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cxvcmx3gcmuxd" path="res://scenes/objects/UI/UI.tscn" id="1_gweqd"]
 [ext_resource type="Script" path="res://scripts/ui/reflection_level.gd" id="1_xr63w"]
-[ext_resource type="PackedScene" uid="uid://cht8r2lt7fu23" path="res://scenes/ui/animetedBG.tscn" id="2_o01s4"]
+[ext_resource type="PackedScene" uid="uid://bl4o3bud7kdem" path="res://scenes/ui/reflection_bg.tscn" id="2_y2bp0"]
 [ext_resource type="Texture2D" uid="uid://c4oyq6fj7ex5m" path="res://assets/images/player/RectBG.png" id="2_yvvso"]
 [ext_resource type="PackedScene" uid="uid://dd3jvhx2fakx1" path="res://scenes/objects/players/Rectangle.tscn" id="3_xxxhs"]
 [ext_resource type="PackedScene" uid="uid://b13arossmgg0l" path="res://scenes/ui/buttons.tscn" id="5_o5x16"]
@@ -10,8 +10,7 @@
 [node name="reflection_level" type="Node2D"]
 script = ExtResource("1_xr63w")
 
-[node name="animetedBG" parent="." instance=ExtResource("2_o01s4")]
-shape = 3
+[node name="ReflectionBG" parent="." instance=ExtResource("2_y2bp0")]
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
@@ -19,6 +18,7 @@ one_shot = true
 [node name="Control" parent="." instance=ExtResource("1_gweqd")]
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
+visible = false
 z_index = -1
 layout_mode = 0
 offset_left = -15.0
@@ -29,7 +29,7 @@ texture = ExtResource("2_yvvso")
 
 [node name="Rectangle" parent="." instance=ExtResource("3_xxxhs")]
 position = Vector2(378, 482)
-scale = Vector2(0.316, 0.288)
+scale = Vector2(0.5, 0.456)
 
 [node name="game_origin" type="Node2D" parent="."]
 position = Vector2(640, 360)

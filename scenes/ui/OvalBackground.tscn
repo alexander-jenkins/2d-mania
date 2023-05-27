@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgr7vyo4atxrg"]
+
+[ext_resource type="Texture2D" uid="uid://besdyhwyri7ov" path="res://assets/images/player/gray.png" id="1_ed5yl"]
+[ext_resource type="Script" path="res://scripts/ui/OvalBackground.gd" id="1_ws5tm"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+script = ExtResource("1_ws5tm")
+
+[node name="ovals" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1520, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ovals"]
+position = Vector2(756, 156)
+scale = Vector2(0.576689, 0.473867)
+texture = ExtResource("1_ed5yl")
+
+[node name="ovals2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(-1, -1)
+motion_mirroring = Vector2(1520, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ovals2"]
+position = Vector2(760, 528)
+scale = Vector2(0.576689, 0.473867)
+texture = ExtResource("1_ed5yl")

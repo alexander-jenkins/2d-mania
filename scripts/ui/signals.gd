@@ -6,3 +6,5 @@ signal deaded()
 signal scoreIncrease(amount)
 # warning-ignore:unused_signal
 signal startGame()
+
+signal MuteOrNot(Is_Mute)

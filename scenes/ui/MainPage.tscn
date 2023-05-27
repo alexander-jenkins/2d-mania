@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bffx67yw8vbnq"]
+[gd_scene load_steps=22 format=3 uid="uid://bffx67yw8vbnq"]
 
 [ext_resource type="Script" path="res://scripts/ui/MainPage.gd" id="1_6donm"]
 [ext_resource type="Texture2D" uid="uid://1423q6jc38xf" path="res://assets/images/player/BackGround.png" id="2_kcryc"]
@@ -12,10 +12,55 @@
 [ext_resource type="Texture2D" uid="uid://dh7e0opsevas3" path="res://assets/images/player/creditHOVER.png" id="8_gjywu"]
 [ext_resource type="Texture2D" uid="uid://nlgcqtt703rf" path="res://assets/images/player/Howtoplaylayout.png" id="10_jjvnu"]
 [ext_resource type="AudioStream" uid="uid://b8252c02k15eg" path="res://assets/sounds/confirm.WAV" id="11_7mly6"]
+[ext_resource type="Texture2D" uid="uid://dtjpblsgmt706" path="res://assets/images/player/Star_sheet.png" id="11_c4qpf"]
 [ext_resource type="Texture2D" uid="uid://b3gouu70bgpj7" path="res://assets/images/player/back.png" id="11_rqhhu"]
 [ext_resource type="AudioStream" uid="uid://djnlvj63p0xvl" path="res://assets/music/2D-Mania_8.mp3" id="12_jtdmp"]
+[ext_resource type="Texture2D" uid="uid://b8n7gmtyby0uw" path="res://assets/images/player/Music.png" id="12_lh4om"]
 [ext_resource type="Texture2D" uid="uid://cx7ollcxrwodg" path="res://assets/images/player/backHOVER.png" id="12_wddau"]
+[ext_resource type="Texture2D" uid="uid://1qyxmr4lowv4" path="res://assets/images/player/MusicNo.png" id="13_icfrq"]
 [ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="14_s7gvw"]
+
+[sub_resource type="FontFile" id="FontFile_kxv5o"]
+fallbacks = Array[Font]([ExtResource("14_s7gvw")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/70/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/70/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="FontFile_06bso"]
 fallbacks = Array[Font]([ExtResource("14_s7gvw")])
@@ -72,10 +117,10 @@ texture = ExtResource("2_kcryc")
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
 [node name="Button" type="TextureButton" parent="CanvasLayer2"]
-offset_left = 706.0
-offset_top = -2.0
-offset_right = 1398.0
-offset_bottom = 437.0
+offset_left = 944.0
+offset_top = 134.0
+offset_right = 1176.0
+offset_bottom = 279.0
 texture_normal = ExtResource("3_mlpmm")
 texture_pressed = ExtResource("3_mlpmm")
 texture_hover = ExtResource("4_ng1i4")
@@ -83,32 +128,67 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Button2" type="TextureButton" parent="CanvasLayer2"]
-offset_left = 821.0
-offset_top = 243.0
-offset_right = 1297.0
-offset_bottom = 545.0
+offset_left = 961.0
+offset_top = 338.0
+offset_right = 1168.0
+offset_bottom = 467.0
 texture_normal = ExtResource("4_ewljg")
 texture_hover = ExtResource("6_lfv13")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Button3" type="TextureButton" parent="CanvasLayer2"]
-offset_left = 899.0
-offset_top = 414.0
-offset_right = 1235.0
-offset_bottom = 629.0
+offset_left = 977.0
+offset_top = 513.0
+offset_right = 1151.0
+offset_bottom = 601.0
 texture_normal = ExtResource("5_18pbx")
 texture_hover = ExtResource("8_gjywu")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
-offset_left = 126.0
-offset_top = 78.0
-offset_right = 880.0
-offset_bottom = 605.0
+offset_left = 92.0
+offset_top = 98.0
+offset_right = 848.0
+offset_bottom = 661.0
 texture = ExtResource("3_guyog")
 expand_mode = 1
+
+[node name="HighScore" type="Label" parent="CanvasLayer2"]
+offset_left = 413.0
+offset_top = 34.0
+offset_right = 459.0
+offset_bottom = 98.0
+theme_override_fonts/font = SubResource("FontFile_kxv5o")
+theme_override_font_sizes/font_size = 70
+text = "0"
+
+[node name="Label" type="Label" parent="CanvasLayer2"]
+offset_left = 29.0
+offset_top = 37.0
+offset_right = 295.0
+offset_bottom = 84.0
+theme_override_fonts/font = SubResource("FontFile_kxv5o")
+theme_override_font_sizes/font_size = 50
+text = "Highscore"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer2"]
+position = Vector2(355, 59)
+scale = Vector2(0.520109, 0.514617)
+texture = ExtResource("11_c4qpf")
+hframes = 10
+
+[node name="music" type="TextureButton" parent="CanvasLayer2"]
+offset_left = 42.0
+offset_top = 625.0
+offset_right = 114.0
+offset_bottom = 696.0
+toggle_mode = true
+texture_normal = ExtResource("12_lh4om")
+texture_pressed = ExtResource("13_icfrq")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="CanvasLayer4" type="CanvasLayer" parent="."]
 visible = false
@@ -174,6 +254,7 @@ stretch_mode = 0
 
 [node name="confirm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_7mly6")
+volume_db = -12.18
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_jtdmp")
@@ -181,5 +262,6 @@ stream = ExtResource("12_jtdmp")
 [connection signal="pressed" from="CanvasLayer2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="toggled" from="CanvasLayer2/music" to="." method="_on_music_toggled"]
 [connection signal="pressed" from="CanvasLayer4/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="CanvasLayer5/back2" to="." method="_on_back_2_pressed"]

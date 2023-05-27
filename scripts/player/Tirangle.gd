@@ -1,5 +1,4 @@
 extends Player
-
 @export var changeX = 2
 @export var changeY = 2
 

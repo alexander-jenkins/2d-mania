@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb2osso6qjl3h"]
+[gd_scene load_steps=8 format=3 uid="uid://bb2osso6qjl3h"]
 
 [ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="1"]
 [ext_resource type="Script" path="res://scripts/ui/score.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://dtjpblsgmt706" path="res://assets/images/player/Star_sheet.png" id="2_5jrce"]
 [ext_resource type="AudioStream" uid="uid://dn7d8uupuvhme" path="res://assets/music/Marching Pixels_14.mp3" id="3_tcum5"]
 [ext_resource type="AudioStream" uid="uid://dcqgmtwm388mw" path="res://assets/sounds/game-over-arcade-6435.wav" id="4_j36g1"]
+[ext_resource type="AudioStream" uid="uid://dgjke72m8jyu3" path="res://assets/music/tutorialbeats_26.mp3" id="6_1fdcl"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
@@ -37,11 +39,24 @@ script = ExtResource("2")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 4
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 64.0
-offset_top = 39.0
-offset_right = 152.0
-offset_bottom = 129.0
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(115.094, 85.7113)
+scale = Vector2(0.60788, 0.619621)
+texture = ExtResource("2_5jrce")
+hframes = 10
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 58.0
+offset_right = 244.0
+offset_bottom = 148.0
 theme_override_fonts/font = SubResource("1")
 theme_override_font_sizes/font_size = 100
 text = "0"
@@ -53,3 +68,6 @@ stream = ExtResource("3_tcum5")
 stream = ExtResource("4_j36g1")
 volume_db = 5.0
 pitch_scale = 0.76
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("6_1fdcl")

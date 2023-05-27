@@ -15,6 +15,7 @@ func _ready():
 func _on_retry_pressed():
 	Score._deaded()
 	Signals.emit_signal("startGame")
+	get_tree().call_group("Emeny", "queue_free")
 	var x = randi_range(0,3)
 	SceneTransition.change_scene_to_file(levels[x], "dissolve")
 
@@ -22,4 +23,5 @@ func _on_retry_pressed():
 func _on_home_pressed():
 	Score._deaded()
 	Score._endGame()
+	get_tree().call_group("Emeny", "queue_free")
 	SceneTransition.change_scene_to_file("res://scenes/ui/MainPage.tscn", "dissolve")

@@ -25,25 +25,23 @@ var level = [
 @onready var alive = true
 
 # Settings
-@export var totalTime = 10
+@export var totalTime = 11
 
-func _ready():	
+func _ready():
+	Signals.connect("deaded", Callable(self, "_deaded"))
 	clock.text = str(totalTime)
 	win_state.hide()
 	Buttons.hide()
-	pass
 
 func _process(_delta):
 	var player = get_node_or_null("Polygon")
 	if player == null:
 		alive = false
 	if not alive:
-		Score.stopMusic()
-		win_state.show()
-		Buttons.show()
+		pass
 	if timer.is_stopped() and totalTime >= 0 and player != null:
-		clock.text = str(totalTime)
 		totalTime -= 1
+		clock.text = str(totalTime)
 		timer.start(1)
 		if totalTime % 3 == 0:
 			spawnNextEnemy()
@@ -59,6 +57,11 @@ func _process(_delta):
 			2:
 				SceneTransition.change_scene_to_file(level[2], "rect")
 	pass
+
+func _deaded():
+	Score.stopMusic()
+	win_state.show()
+	Buttons.show()
 
 func spawnNextEnemy():
 	spawns.shuffle()

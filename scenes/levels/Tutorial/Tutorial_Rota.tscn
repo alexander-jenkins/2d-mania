@@ -1,0 +1,128 @@
+[gd_scene load_steps=8 format=3 uid="uid://b84nam4erkear"]
+
+[ext_resource type="PackedScene" uid="uid://cht8r2lt7fu23" path="res://scenes/ui/animetedBG.tscn" id="1_8udox"]
+[ext_resource type="Texture2D" uid="uid://480l3ixo4hrl" path="res://assets/images/player/CircleBG.png" id="2_awsrt"]
+[ext_resource type="PackedScene" uid="uid://kwj0123lvmw2" path="res://scenes/objects/players/Circle.tscn" id="3_dqgyi"]
+[ext_resource type="PackedScene" uid="uid://cv0xcmnedbjqv" path="res://scenes/objects/players/Oval.tscn" id="4_gxbhm"]
+[ext_resource type="PackedScene" uid="uid://cbfsnb5qq4sgr" path="res://scenes/ui/dialogue_player.tscn" id="5_e2bcj"]
+[ext_resource type="FontFile" uid="uid://dgqd6yaeochmg" path="res://assets/fonts/rusty-hooks-font/RustyHooksRegular-nROER.ttf" id="6_r8a88"]
+
+[sub_resource type="FontFile" id="FontFile_66x7h"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("6_r8a88")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/100/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/100/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/70/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/70/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/60/0 = Vector2(0, 0)
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/60/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/60/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/60/0/glyphs/0/size = Vector2(0, 0)
+cache/0/60/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/60/0/glyphs/0/texture_idx = -1
+cache/0/60/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/100/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/70/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/60/0/kerning_overrides/60/0 = Vector2(0, 0)
+
+[node name="Tutorial_Rota" type="Node2D"]
+
+[node name="animetedBG" parent="." instance=ExtResource("1_8udox")]
+layer = -1
+shape = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -3
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
+modulate = Color(0.909804, 0.639216, 0.627451, 1)
+offset_left = -28.0
+offset_top = -24.0
+offset_right = 1298.0
+offset_bottom = 733.0
+texture = ExtResource("2_awsrt")
+
+[node name="Circle" parent="." instance=ExtResource("3_dqgyi")]
+position = Vector2(640, 360)
+
+[node name="Oval" parent="." instance=ExtResource("4_gxbhm")]
+position = Vector2(102, 602)
+path = "res://scenes/levels/Tutorial/Tutorial_Scale.tscn"
+
+[node name="DialoguePlayer" parent="Oval" instance=ExtResource("5_e2bcj")]
+dialogue_file = "res://assets/fonts/OvalRo.json"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 378.0
+offset_top = 81.0
+offset_right = 929.0
+offset_bottom = 201.0
+theme_override_fonts/font = SubResource("FontFile_66x7h")
+theme_override_font_sizes/font_size = 60
+text = "Rotation
+Level"
+horizontal_alignment = 1
